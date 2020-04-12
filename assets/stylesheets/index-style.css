@@ -52,12 +52,6 @@ h2 {
    left: 25%;
 }
 
-@-webkit-keyframes fade {
-   0% { opacity: 0; }
-   25% { opacity: 0; }
-   100% { opacity: 1; }
-}
-
 @keyframes fade {
    0% { opacity: 0; }
    25% { opacity: 0; }

@@ -31,6 +31,7 @@ a {
    position: absolute;
    bottom: 100%;
    animation: move-out 1s;
+   -webkit-animation: 1s move-out;
 }
 
 .hidden {
@@ -47,7 +48,25 @@ a {
    }
 }
 
+@-webkit-keyframes move-out {
+   0% {
+      bottom: 0;
+   }
+   100% {
+      bottom: -100%;
+   }
+}
+
 @keyframes move-in {
+   0% {
+      bottom: 100%;
+   }
+   100% {
+      bottom: 0%;
+   }
+}
+
+@-webkit-keyframes move-in {
    0% {
       bottom: 100%;
    }
