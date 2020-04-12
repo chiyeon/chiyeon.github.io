@@ -1,0 +1,38 @@
+#main-page-container {
+   text-align: center;
+}
+
+h1 {
+   line-height: 5%;
+   font-size: 400%;
+}
+
+h2 {
+   line-height: 50%;
+   font-size: 150%;
+   font-weight: lighter;
+}
+
+#main-page {
+   text-align: center;
+   padding-top: 3%;
+   transition: 1s;
+}
+
+#flex-box {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+#flex-element {
+   width: 7%;
+   padding-top: 1%;
+   text-align: center;
+   color: rgb(248, 248, 248);
+   text-decoration: none;
+}
+
+#flex-element:hover {
+   color: rgb(128, 128, 128);
+}
