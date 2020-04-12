@@ -8,7 +8,37 @@
     <link href="assets/stylesheets/index-style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div id="main-page-container">
+    <script>
+      var elements = document.getElementsByClassName("page");
+      function FocusPage(pageID) {
+        for(var i = 0; i < elements.length; i++) {
+          if(elements[i].classList.contains("main")) {
+            var currPage = i;
+          }
+        }
+
+        for(var i = 0; i < elements.length; i++) {
+          if(i == pageID) {
+            elements[i].classList.add("main");
+            if(elements[i].classList.contains("hidden")) {
+              elements[i].classList.remove("hidden");
+            } else if(elements[i].classList.contains("hiding")) {
+              elements[i].classList.remove("hiding");
+            }
+          } else if(elements[i].classList.contains("main")) {
+            elements[i].classList.remove("main");
+            elements[i].classList.add("hiding");
+          } else if(elements[i].classList.contains("hiding")) {
+            elements[i].classList.remove("hiding");
+            elements[i].classList.add("hidden");
+          } else if(!elements[i].classList.contains("hidden")) {
+            elements[i].classList.add("hidden");
+          }
+        }
+      }
+    </script>
+
+    <div class="page main">
       <div id="main-page">
         <div id="title">
           <h1>puffy.jelly</h1>
@@ -17,17 +47,38 @@
         </div>
         <div id="categories">
            <div id="flex-box">
-             <button onclick="window.location.href = 'games.html';" id="flex-element">
+             <button onclick="FocusPage(1)" id="flex-element">
                games
              </button>
-             <button onclick="window.location.href = 'videos.html';" id="flex-element">
+             <button onclick="FocusPage(2)" id="flex-element">
                videos
              </button>
-             <button onclick="window.location.href = 'about.html';" id="flex-element">
+             <button onclick="FocusPage(3)" id="flex-element">
                about
              </button>
            </div>
         </div>
+      </div>
+    </div>
+    <div class="page hidden">
+      <div id="title">
+        <h1>games</h1>
+        <button onclick="FocusPage(0)" id="flex-element">back</button>
+      </div>
+    </div>
+    <div class="page hidden">
+      <div id="title">
+        <h1>videos</h1>
+        <button onclick="FocusPage(0)" id="flex-element">back</button>
+      </div>
+    </div>
+    <div class="page hidden">
+      <div id="title">
+        <h1>about me</h1>
+        <p id="about-me">
+          I'm a self taught, 17 year old programmer and video creator. I enjoy making games, programs, short films, music videos, and all kinds of computer creations for fun. Due to this all being a hobby, don't expect the most quality of products! 
+        </p>
+        <button onclick="FocusPage(0)" id="flex-element">back</button>
       </div>
     </div>
   </body>
