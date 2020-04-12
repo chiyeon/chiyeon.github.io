@@ -1,7 +1,6 @@
 h1 {
    line-height: 5%;
    font-size: 400%;
-   padding-top: 30vh;
 }
 
 h2 {
@@ -14,6 +13,11 @@ h2 {
    text-align: center;
    padding-top: 3%;
    transition: 1s;
+   padding-top: 30vh;
+}
+
+#about-container {
+   padding-top: 24vh;
 }
 
 #flex-box {
@@ -43,6 +47,7 @@ h2 {
 
 #title {
    text-align: center;
+   padding-top: 3vh;
 }
 
 #about-me {
