@@ -16,6 +16,13 @@ h2 {
    padding-top: 30vh;
 }
 
+#icon_ku {
+   position: absolute;
+   transform: translate(-50%, -100%);
+   width: 15%;
+   z-index: -1;
+}
+
 #about-container {
    padding-top: 24vh;
 }
