@@ -19,7 +19,7 @@ h2 {
 #icon_ku {
    position: absolute;
    transform: translate(-50%, -125%);
-   width: 10%;
+   width: 7em;
    z-index: -1;
 }
 
