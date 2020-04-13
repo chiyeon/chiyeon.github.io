@@ -13,13 +13,13 @@ h2 {
    text-align: center;
    padding-top: 3%;
    transition: 1s;
-   padding-top: 30vh;
+   padding-top: 35vh;
 }
 
 #icon_ku {
    position: absolute;
-   transform: translate(-50%, -100%);
-   width: 15%;
+   transform: translate(-50%, -125%);
+   width: 10%;
    z-index: -1;
 }
 
