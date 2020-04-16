@@ -51,7 +51,7 @@ h2 {
 }
 
 #flex-element {
-   width: 12vmin;
+   width: 9.6vmin;
    padding-top: 1%;
    text-align: center;
    color: rgb(248, 248, 248);
@@ -62,7 +62,7 @@ h2 {
 
    outline: 0;
    font-family: renner;
-   font-size: 3vmin;
+   font-size: 2.15vmin;
 
    opacity: 1;
    animation: fade 1s linear;
