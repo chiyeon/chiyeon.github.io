@@ -14,12 +14,12 @@
             padding: 0;
             font-family: gravity;
             color: rgb(102, 102, 102);
-            overflow-x: hidden;
+            overflow: hidden;
          }
 
          #todo-list {
             overflow-y: auto;
-            height: 79vh;
+            height: 80vh;
          }
 
          #main-div-container {
@@ -51,7 +51,7 @@
 
          #title-container {
             width: 100%;
-            height: 16vh;
+            height: 15vh;
             position: relative;
          }
 
@@ -61,12 +61,14 @@
          }
 
          h1 {
-            font-size: 450%;
+            font-size: 6vh;
             width: 100%;
          }
 
          h3 {
-            font-size: 100%;
+            font-size: 1.5vh;
+            padding-right: 16%;
+            padding-left: 16%;
          }
 
          #task-input-container {
@@ -209,16 +211,17 @@
             top: 50%;
             transform: translate(-50%, -50%);
             background-color:#ccc;
-            width: 50%;
+            width: 45vmin;
             display: flex;
             flex-direction: column;
             align-items: center;
          }
          
          #congrats-image {
-            width: 35vw;
             padding-top: 4%;
             padding-bottom: 8%;
+            width: auto;
+            height: 35vmin;
          }
 
          #congrats-text {
@@ -234,7 +237,7 @@
             padding-left: 5%;
             padding-right: 5%;
             font-size: 150%;
-            margin-bottom: 4%;
+            margin-bottom: 8%;
          }
 
          #congrats button:hover {
@@ -255,7 +258,7 @@
                
                <span>
                   <h1>TO-DO LIST</h1>
-                  <h3>for all your to-do-ing needs</h3>
+                  <h3 id='quote'></h3>
                </span>
                <!--button id="clear-all-button">Clear All</button-->
             </div>
@@ -297,6 +300,7 @@
          });
 
          UpdateCatImage();
+         SetRandomQuote();
          tasks = LoadTasks();
          UpdateTasks();
 
@@ -355,8 +359,6 @@
       function ToggleTaskCompletion(task) {
          if(!tasks.includes(task))
             return;
-
-         console.log(task.task + ' was hit!');
          if(list.children.length != 0) {
             if(task.completed) {
                task.completed = false;
@@ -412,7 +414,6 @@
          button.classList.add("hidden");
          button.addEventListener('click', function() {
             id = [].indexOf.call(tasks, task);
-            console.log(id);
             RemoveTask(id);
          });
          paragraph.appendChild(button);
@@ -421,16 +422,18 @@
       }
 
       function UpdateCatImage() {
-         let requestURL = 'https://api.thecatapi.com/v1/images/search';
-         var request = new XMLHttpRequest();
-         request.onreadystatechange = function() {
-            if(request.readyState == 4) {
-               var cat = JSON.parse(this.responseText);
-               document.getElementById('congrats-image').src = cat[0].url;
-            }
-         }
-         request.open("GET", requestURL, true);
-         request.send();
+         fetch('https://api.thecatapi.com/v1/images/search')
+         .then(response => response.json())
+         .then(data => document.getElementById('congrats-image').src = data[0].url);
+      }
+
+      function SetRandomQuote() {
+         fetch('https://type.fit/api/quotes')
+         .then(response => response.json())
+         .then(function(data) {
+            var quote = data[Math.floor(Math.random() * data.length)];
+               document.getElementById('quote').innerHTML = '<i>' + quote.text + '</i> - ' + quote.author;
+         });
       }
 
       function SaveTasks() {
