@@ -16,9 +16,10 @@
             color: rgb(102, 102, 102);
             overflow-x: hidden;
          }
-         ::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
+
+         #todo-list {
+            overflow-y: auto;
+            height: 79vh;
          }
 
          #main-div-container {
@@ -158,6 +159,10 @@
             text-decoration: line-through;
             background-color: #777;
             color: #666;
+         }
+
+         .task-complete:hover div {
+            background-color: #555;
          }
 
          .task:hover .hidden {
@@ -332,7 +337,7 @@
                task.id = tasks.indexOf(task);
             });
          }
-         
+
          UpdateTasks();
          SaveTasks();
       }
