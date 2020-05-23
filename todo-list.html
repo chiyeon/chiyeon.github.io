@@ -233,7 +233,7 @@
          }
 
          #congrats button:hover {
-
+            background-color: rgb(144, 195, 164);
          }
       </style>
    </head>
@@ -332,7 +332,8 @@
                task.id = tasks.indexOf(task);
             });
          }
-
+         
+         UpdateTasks();
          SaveTasks();
       }
 
@@ -347,6 +348,10 @@
       }
 
       function ToggleTaskCompletion(task) {
+         if(!tasks.includes(task))
+            return;
+
+         console.log(task.task + ' was hit!');
          if(list.children.length != 0) {
             if(task.completed) {
                task.completed = false;
