@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>To-Do</title>
+      <!--Gravity is a royalty free font under the CC 4.0 International License-->
+      <style>
+         @font-face {
+            font-family: gravity;
+            src: url('./Gravity-Light.otf');
+         }
+
+         * {
+            margin: 0;
+            padding: 0;
+            font-family: gravity;
+            color: rgb(102, 102, 102);
+            overflow-x: hidden;
+         }
+         ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+         }
+
+         #main-div-container {
+            background-color:rgb(138, 138, 138);
+            height: 100vh;
+            position: relative;
+         }
+         /*background_2.jpg is a free stock background image*/
+         #main-div-container #background {
+            height: 100%;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: auto 100vmax;
+            position: relative;
+            opacity: 0.5;
+         }
+
+         #main-div {
+            background-color: #ddd;
+            width: 500px;
+            display: inline-block;
+            position: absolute;
+            top: 0%;
+            text-align: center;
+            left: 50%;
+            transform-origin: center;
+            transform: translate(-50%, 0);
+         }
+
+         #title-container {
+            width: 100%;
+            height: 16vh;
+            position: relative;
+         }
+
+         #title-container span {
+            display: inline-block;
+            width: 100%;
+         }
+
+         h1 {
+            font-size: 450%;
+            width: 100%;
+         }
+
+         h3 {
+            font-size: 100%;
+         }
+
+         #task-input-container {
+            width: 100%;
+            height: 4vh;
+            display:flex;
+            font-size: 24px;
+         }
+
+         #task-input-container input {
+            width: 75%;
+            height: 100%;
+            border: none;
+            background-color: rgb(182, 182, 182);
+            font-size: 24px;
+         }
+
+         #task-input-container input:focus, textarea:focus, select:focus {
+            outline: none;
+            background-color: #555;
+            color: #ffffff;
+         }
+
+         #task-input-container input, select, textarea {
+            color: #777;
+         }
+
+         #task-input-container input:hover {
+            background-color: #555;
+            transition: 200ms;
+         }
+
+         #task-input-container button {
+            width: 25%;
+            float: right;
+            white-space: nowrap;
+            height: 100%;
+            background-color: rgb(162, 223, 185);
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            font-size: 22px;
+         }
+
+         #task-input-container button:hover {
+            background-color: rgb(161, 206, 182);
+         }
+
+         #task-input-container button:active {
+            background-color: rgb(140, 179, 158);
+         }
+
+         #progress-bar-container {
+            width: 100%;
+            height: 1vh;
+            background-color: #bbb;
+         }
+
+         #progress-bar {
+            height: 100%;
+            width: 0%;
+            transition: 1s;
+            background-color: rgb(162, 223, 185);
+         }
+
+         .task {
+            width: 100%;
+            height: 7vh;
+            font-size: 24px;
+            user-select: none;
+            color: #ddd;
+            vertical-align: middle;
+         }
+
+         .task div {
+            flex-direction: row;
+            padding-left: 6%;
+            display: flex;
+            align-items: center;
+            background-color: #ccc;
+            height: 100%;
+            width: 100%;
+         }
+
+         .task:hover div {
+            background-color: #bbb;
+         }
+
+         .task-complete div {
+            text-decoration: line-through;
+            background-color: #777;
+            color: #666;
+         }
+
+         .task:hover .hidden {
+            display: block;
+         }
+
+         #delete-button {
+            transform: translate(-45px, 0);
+            margin-left: auto;
+            background-color: rgb(204, 143, 163);
+            color: rgb(187, 187, 187);
+            width: 14%;
+            height: 50%;
+            border: none;
+            text-decoration: none;
+            outline: none;
+            font-size: 18px;
+         }
+
+         #delete-button:hover {
+            background-color: rgb(163, 128, 139);
+         }
+
+         .hidden {
+            display: none;
+         }
+
+         #congrats-container {
+            padding: 2%;
+            background-color:rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+         }
+
+         #congrats {
+            text-align: center;
+            transition: 0.5s;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#ccc;
+            width: 50%;
+         }
+         
+         #congrats-image {
+            width: 35vw;
+            padding-top: 4%;
+            padding-bottom: 8%;
+         }
+
+         #congrats-text {
+            padding: 3%;
+            font-size: 200%;
+         }
+      </style>
+   </head>
+   <body>
+      <div id='main-div-container'>
+         <div id='background'></div>
+         <div id='main-div'>
+            <div id='progress-bar-container'>
+               <div id='progress-bar'>
+      
+               </div>
+            </div>
+            <div id="title-container">
+               
+               <span>
+                  <h1>TO-DO LIST</h1>
+                  <h3>for all your to-do-ing needs</h3>
+               </span>
+               <!--button id="clear-all-button">Clear All</button-->
+            </div>
+      
+            <div id="task-input-container">
+               <input id="task-input" type="text" placeholder="New Task"/>
+               <button id="task-button" type="button" onclick="AddTask();">Add Task</button>
+            </div>
+      
+            <div id="todo-list">
+            </div>
+      
+            
+         </div>
+         <div id='congrats-container' class='hidden'>
+            <div id='congrats'>
+               <h3 id="congrats-text">Congratulations, You finished everything!</h3>
+               <p>Enjoy a random cat picture!</p>
+               <img id="congrats-image"/>
+            </div>
+         </div>
+      </div>
+   </body>
+
+   <script>
+      UpdateCatImage();
+
+      var list = document.getElementById("todo-list");
+      var taskInput = document.getElementById('task-input');
+
+      taskInput.addEventListener('keydown', function(e) {
+         if(e.keyCode == 13) {
+            e.preventDefault();
+            document.getElementById('task-button').click();
+         }
+      });
+
+      var tasks = [
+         {
+            id: 0,
+            task: "Bake a cake",
+            completed: false
+         }
+      ];
+
+      AddUITask(tasks[0]);
+
+      function AddTask() {
+         if(taskInput.value == "")
+            return;
+
+         var newTask = CreateTaskObject(taskInput.value);
+         taskInput.value = "";
+
+         tasks.push(newTask);
+         AddUITask(newTask);
+      }
+
+      function CreateTaskObject(task) {
+         return {
+            id: tasks.length,
+            task: task,
+            completed: false
+         };
+      }
+
+      function RemoveTask(_id) {
+         tasks.splice(_id, 1);
+         list.removeChild(list.children[_id]);
+         
+         if(tasks.length > 0) {
+            tasks.forEach(function(task) {
+               task.id = tasks.indexOf(task);
+            });
+         }
+      }
+
+      function GetNumberOfCompletedTasks() {
+         var completedTasks = 0;
+         tasks.forEach(function(t) {
+            if(t.completed)
+               completedTasks = completedTasks + 1;
+         });
+
+         return completedTasks;
+      }
+
+      function UpdateTask(task, taskDiv) {
+         if(task.completed) {
+            task.completed = false;
+            taskDiv.classList.remove("task-complete");
+         } else {
+            task.completed = true;
+            taskDiv.classList.add("task-complete");
+         }
+
+         var completedTasks = GetNumberOfCompletedTasks();
+
+         var percent = completedTasks / tasks.length * 100;
+
+         if(percent == 100) {
+            //UpdateCatImage();
+            document.getElementById('congrats-container').classList.remove("hidden");
+         } else {
+            document.getElementById('congrats-container').classList.add("hidden");
+         }
+         
+         document.getElementById('progress-bar').setAttribute('style', 'width:' + percent + '%');
+         document.getElementById('progress-bar').style.width = percent + '%'; 
+         //checkbox.checked = task.completed;
+      }
+
+      function AddUITask(task) {
+         var taskDiv = document.createElement("div");
+         taskDiv.classList.add("task");
+
+         var paragraph = document.createElement('div');
+         paragraph.innerHTML = task.task;
+         taskDiv.appendChild(paragraph);
+
+         taskDiv.addEventListener('click', function() {
+            UpdateTask(task, taskDiv);
+         });
+
+         /*var checkbox = document.createElement('input');
+         checkbox.setAttribute("type", "checkbox");
+         taskDiv.appendChild(checkbox);*/
+
+         var button = document.createElement('button');
+         button.setAttribute('type', 'button');
+         button.innerHTML = 'Delete';
+         button.id = "delete-button"
+         button.classList.add("hidden");
+         button.addEventListener('click', function() {
+            id = [].indexOf.call(tasks, task);
+            console.log(id);
+            RemoveTask(id);
+         });
+         paragraph.appendChild(button);
+
+         list.append(taskDiv);
+      }
+
+      function UpdateCatImage() {
+         let requestURL = 'https://api.thecatapi.com/v1/images/search';
+         var request = new XMLHttpRequest();
+         request.onreadystatechange = function() {
+            if(request.readyState == 4) {
+               var cat = JSON.parse(this.responseText);
+               document.getElementById('congrats-image').src = cat[0].url;
+            }
+         }
+         request.open("GET", requestURL, true);
+         request.send();
+      }
+   </script>
+</html>
