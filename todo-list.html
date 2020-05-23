@@ -205,6 +205,9 @@
             transform: translate(-50%, -50%);
             background-color:#ccc;
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
          }
          
          #congrats-image {
@@ -216,6 +219,21 @@
          #congrats-text {
             padding: 3%;
             font-size: 200%;
+         }
+
+         #congrats button {
+            border: none;
+            background-color: rgb(162, 223, 185);
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 150%;
+            margin-bottom: 4%;
+         }
+
+         #congrats button:hover {
+
          }
       </style>
    </head>
@@ -252,33 +270,37 @@
                <h3 id="congrats-text">Congratulations, You finished everything!</h3>
                <p>Enjoy a random cat picture!</p>
                <img id="congrats-image"/>
+               <button onclick="RestartList();">Create New List</button>
             </div>
          </div>
       </div>
    </body>
 
    <script>
-      UpdateCatImage();
-
       var list = document.getElementById("todo-list");
       var taskInput = document.getElementById('task-input');
+      var tasks;
 
-      taskInput.addEventListener('keydown', function(e) {
-         if(e.keyCode == 13) {
-            e.preventDefault();
-            document.getElementById('task-button').click();
-         }
-      });
+      Initialize();
 
-      var tasks = [
-         {
-            id: 0,
-            task: "Bake a cake",
-            completed: false
-         }
-      ];
+      function Initialize() {
+         taskInput.addEventListener('keydown', function(e) {
+            if(e.keyCode == 13) {
+               e.preventDefault();
+               document.getElementById('task-button').click();
+            }
+         });
 
-      AddUITask(tasks[0]);
+         UpdateCatImage();
+         tasks = LoadTasks();
+         UpdateTasks();
+
+         tasks.forEach(function(task) {
+            AddUITask(task);
+            if(task.completed)
+               list.children[task.id].classList.add("task-complete");
+         });
+      }
 
       function AddTask() {
          if(taskInput.value == "")
@@ -289,6 +311,8 @@
 
          tasks.push(newTask);
          AddUITask(newTask);
+         UpdateTasks();
+         SaveTasks();
       }
 
       function CreateTaskObject(task) {
@@ -308,6 +332,8 @@
                task.id = tasks.indexOf(task);
             });
          }
+
+         SaveTasks();
       }
 
       function GetNumberOfCompletedTasks() {
@@ -320,14 +346,21 @@
          return completedTasks;
       }
 
-      function UpdateTask(task, taskDiv) {
-         if(task.completed) {
-            task.completed = false;
-            taskDiv.classList.remove("task-complete");
-         } else {
-            task.completed = true;
-            taskDiv.classList.add("task-complete");
+      function ToggleTaskCompletion(task) {
+         if(list.children.length != 0) {
+            if(task.completed) {
+               task.completed = false;
+               list.children[task.id].classList.remove("task-complete");
+            } else {
+               task.completed = true;
+               list.children[task.id].classList.add("task-complete");
+            }
+
+            UpdateTasks();
          }
+      }
+
+      function UpdateTasks() {
 
          var completedTasks = GetNumberOfCompletedTasks();
 
@@ -341,8 +374,9 @@
          }
          
          document.getElementById('progress-bar').setAttribute('style', 'width:' + percent + '%');
-         document.getElementById('progress-bar').style.width = percent + '%'; 
-         //checkbox.checked = task.completed;
+         document.getElementById('progress-bar').style.width = percent + '%';
+
+         SaveTasks();
       }
 
       function AddUITask(task) {
@@ -354,7 +388,7 @@
          taskDiv.appendChild(paragraph);
 
          taskDiv.addEventListener('click', function() {
-            UpdateTask(task, taskDiv);
+            ToggleTaskCompletion(task, taskDiv);
          });
 
          /*var checkbox = document.createElement('input');
@@ -387,6 +421,39 @@
          }
          request.open("GET", requestURL, true);
          request.send();
+      }
+
+      function SaveTasks() {
+         localStorage.setItem("user_tasks", JSON.stringify(tasks));
+      }
+
+      function LoadTasks() {
+         if(localStorage.getItem("user_tasks")) {
+            return JSON.parse(localStorage.getItem("user_tasks"));
+         } else {
+            return [
+               {
+                  id: 0,
+                  task: "Bake a cake",
+                  completed: false
+               }
+            ];
+         }
+      }
+
+      function RestartList() {
+         tasks = [
+            {
+               id: 0,
+               task: "Bake a cake",
+               completed: false
+            }
+         ];
+         SaveTasks();
+         
+         list.innerHTML = "";
+
+         Initialize();
       }
    </script>
 </html>
