@@ -84,6 +84,7 @@ body {
     outline: none;
     background-color: #7c7c7c00;
     color: rgb(192, 192, 192);
+    cursor: pointer;
 }
 
 #restart-button:hover {
@@ -101,6 +102,7 @@ body {
     font-size: 1.7vh;
     padding-right: 1.75vh;
     padding-left: 1.75vh;
+    cursor: pointer;
 }
 
 .answer-button:hover {
