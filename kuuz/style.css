@@ -28,6 +28,13 @@ body {
     box-shadow: 6px 6px rgb(122, 122, 122);
 }
 
+#progress-bar {
+    background-color: rgb(227, 227, 227);
+    widtH: 0%;
+    height: .77vh;
+    transition: 300ms;
+}
+
 #question {
     font-size: 2.35vh;
     font-weight: bold;

@@ -45,6 +45,10 @@ function pickAnswer(answer) {
 
     index++;
 
+    //update the progress bar
+    var percentComplete = (index ) / numTotalQuestions * 100;
+    $('#progress-bar').css('width', percentComplete + '%');
+
     //if the last question is answered, give results
     if(index >= numTotalQuestions) {
         $.when($('#question-box').fadeOut()).then(
@@ -54,7 +58,6 @@ function pickAnswer(answer) {
         );
         return;
     }
-    
 
     currentQuestion = questions[index];
     currentQuestion.answers = shuffle(currentQuestion.answers);
@@ -95,6 +98,9 @@ function FinishQuiz() {
     //remove selectable answers
     $('#answers-box').css('visibility', 'hidden');
     $('.answer-button').prop('disabled', true);
+
+    //remove progress bar
+    $('#progress-bar').css('visibility', 'hidden');
     
     //show results and update house description
     $('#house-description').html(houseDescription);
@@ -113,9 +119,14 @@ function Restart() {
 
         //hide the results
         $('#results-box').css('visibility', 'hidden');
+
+        //show progress bar
+        $('#progress-bar').css('visibility', 'visible');
+
         //show answers and make selectable again
         $('#answers-box').css('visibility', 'visible');
         $('.answer-button').prop('disabled', false);
+
         //make question unhighlightable
         $('#question').removeClass('highlightable-text');
 
