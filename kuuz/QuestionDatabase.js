@@ -19,7 +19,7 @@ QuestionDatabase.push(CreateQuestion(
     "What came in the mail today?",
     [
         CreateAnswer("a paper airplane", "explorer", 1),
-        CreateAnswer("a knife", "conqueror", 1),
+        CreateAnswer("thoist testicles", "conqueror", 1),
         CreateAnswer("a mirror", "visionary", 1),
         CreateAnswer("deez nuts", "explorer", 1.5)
     ]
@@ -36,7 +36,7 @@ QuestionDatabase.push(CreateQuestion(
 ));
 
 QuestionDatabase.push(CreateQuestion(
-    "What is something you'll never say to another person?",
+    "What is something you'd never say to another person?",
     [
         CreateAnswer("Funny monkey gif?", "explorer", 1),
         CreateAnswer("Travis Scott Borgor", "conqueror", 1),
@@ -86,7 +86,7 @@ QuestionDatabase.push(CreateQuestion(
 ))
 
 QuestionDatabase.push(CreateQuestion(
-    "______ makes me really happy.",
+    "______ makes you really happy.",
     [
         CreateAnswer("The Travis Scott Burger", "explorer", 1),
         CreateAnswer("Playing Fortnite", "conqueror", 1),
