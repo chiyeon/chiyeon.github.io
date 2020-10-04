@@ -23,7 +23,7 @@
          }
 
          #main-div-container {
-            background-color:rgb(138, 138, 138);
+            background-color:#999;
             height: 100vh;
             position: relative;
          }
@@ -34,7 +34,7 @@
             background-repeat: no-repeat;
             background-size: auto 100vmax;
             position: relative;
-            opacity: 0.5;
+            opacity: 0.35;
          }
 
          #main-div {
@@ -287,7 +287,7 @@
    <script>
       var list = document.getElementById("todo-list");
       var taskInput = document.getElementById('task-input');
-      var tasks;
+      var tasks = [];
 
       Initialize();
 
@@ -321,7 +321,6 @@
          tasks.push(newTask);
          AddUITask(newTask);
          UpdateTasks();
-         SaveTasks();
       }
 
       function CreateTaskObject(task) {
@@ -343,7 +342,6 @@
          }
 
          UpdateTasks();
-         SaveTasks();
       }
 
       function GetNumberOfCompletedTasks() {
@@ -377,18 +375,25 @@
          var completedTasks = GetNumberOfCompletedTasks();
 
          var percent = completedTasks / tasks.length * 100;
-
-         if(percent == 100) {
-            //UpdateCatImage();
-            document.getElementById('congrats-container').classList.remove("hidden");
-         } else {
-            document.getElementById('congrats-container').classList.add("hidden");
-         }
          
          document.getElementById('progress-bar').setAttribute('style', 'width:' + percent + '%');
          document.getElementById('progress-bar').style.width = percent + '%';
 
          SaveTasks();
+
+         if(percent == 100) {
+            ShowReward();
+         } else {
+            HideReward();
+         }
+      }
+
+      function ShowReward() {
+         document.getElementById('congrats-container').classList.remove("hidden");
+      }
+
+      function HideReward() {
+         document.getElementById('congrats-container').classList.add("hidden");
       }
 
       function AddUITask(task) {
@@ -402,10 +407,6 @@
          taskDiv.addEventListener('click', function() {
             ToggleTaskCompletion(task, taskDiv);
          });
-
-         /*var checkbox = document.createElement('input');
-         checkbox.setAttribute("type", "checkbox");
-         taskDiv.appendChild(checkbox);*/
 
          var button = document.createElement('button');
          button.setAttribute('type', 'button');
