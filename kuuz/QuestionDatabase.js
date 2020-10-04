@@ -86,11 +86,11 @@ QuestionDatabase.push(CreateQuestion(
 ))
 
 QuestionDatabase.push(CreateQuestion(
-    "______ makes you really happy.",
+    "______ is my favorite childhood memory.",
     [
         CreateAnswer("The Travis Scott Burger", "explorer", 1),
         CreateAnswer("Playing Fortnite", "conqueror", 1),
         CreateAnswer("Playing Valorant", "visionary", 1),
-        CreateAnswer("Curb stomping you", "conqueror", 1.5),
+        CreateAnswer("Being born", "conqueror", 1.5),
     ]
 ))
