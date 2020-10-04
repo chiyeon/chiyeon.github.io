@@ -26,9 +26,6 @@ body {
     text-align: center;
     background-color: rgb(173, 173, 173);
     box-shadow: 6px 6px rgb(122, 122, 122);
-    display:none;
-    opacity:0.0;
-    filter:alpha(opacity=0);
 }
 
 #question {
@@ -100,4 +97,11 @@ body {
 .answer-button:hover {
     background-color: #7c7c7c44;
     transition: 200ms;
+}
+
+.highlightable-text {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }

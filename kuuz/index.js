@@ -1,34 +1,39 @@
 const numHouseQuestions = 2;
 const numTotalQuestions = 4;
-//const questionsPath = "./questions.json";
 
-var questions = [];
-var currentQuestion;
-var index = -1;
-
-var userData = {
-    'explorer': 0,
-    'conqueror': 0,
-    'visionary': 0
-};
-
-init();
+var questions, currentQuestion, userData, index;
 
 function init() {
 
-    var index = 0;
+    //assign default values to variables
+
+    //hold randomly selected questions
+    questions = [];
+    //active question
+    currentQuestion = null;
+    //to iterate through questions
+    index = -1;
+
+    //points given per question answered
+    userData = {
+        'explorer': 0,
+        'conqueror': 0,
+        'visionary': 0
+    };
+
+    /*
+    steal random questions based on QuestionDatabase and 
+    Total Questions (how many will the user answer) and
+    number of House Questions (how many cater to a specific house,
+        usually text to each other in the database)
+    */
     for(var i = 0; i < numTotalQuestions * numHouseQuestions; i += 2) {
         questions.push(QuestionDatabase[Random(i, i + 1)]);
-        index++;
     }
+
+    //start answering
     pickAnswer(0);
-    $('#question-box').fadeTo('slow', 1, function() {
-
-    });
-}
-
-function Random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    $('#question-box').fadeIn();
 }
 
 function pickAnswer(answer) {
@@ -36,7 +41,6 @@ function pickAnswer(answer) {
     //if theres already a question, track the answer
     if(currentQuestion != null) {
         userData[currentQuestion.answers[answer].house] += currentQuestion.answers[answer].value;
-        console.log(userData);
     }
 
     index++;
@@ -58,26 +62,16 @@ function pickAnswer(answer) {
     $('#question').html(currentQuestion.question);
 
     for(var j = 0; j < 4; j++) {
-        //console.log(`${j + 1} - ${currentQuestion.answers[j].answer}`);
         $('#button' + j).html(currentQuestion.answers[j].answer);
     }
-}
-
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
-    }
-    return a;
 }
 
 function FinishQuiz() {
 
     var houseDescription;
     var house = 'explorer';
+
+    //pls fix valve
     if(userData['conqueror'] > userData[house])
         house = 'conqueror';
     if(userData['visionary'] > userData[house])
@@ -98,30 +92,51 @@ function FinishQuiz() {
             break;
     }
 
+    //remove selectable answers
     $('#answers-box').css('visibility', 'hidden');
+    $('.answer-button').prop('disabled', true);
+    
+    //show results and update house description
     $('#house-description').html(houseDescription);
     $('#results-box').css('visibility', 'visible');
-    $('#question').html(`You were placed in the <b>House of ${house}</b>!`);
-    $('.answer-button').prop('disabled', true);
+    $('#question').html(`You were placed in the House of ${house}!`);
+    //make sure text is highlightable!
+    $('#question').addClass('highlightable-text');
+
+    //fade box again
     $('#question-box').fadeIn();
 }
 
 function Restart() {
+    //fade out box
     $.when($('#question-box').fadeOut()).then(function() {
-        questions = [];
-        currentQuestion = null;
-        index = -1;
-    
-        userData = {
-            'explorer': 0,
-            'conqueror': 0,
-            'visionary': 0
-        };
 
+        //hide the results
         $('#results-box').css('visibility', 'hidden');
+        //show answers and make selectable again
         $('#answers-box').css('visibility', 'visible');
         $('.answer-button').prop('disabled', false);
+        //make question unhighlightable
+        $('#question').removeClass('highlightable-text');
 
         init();
     });
 }
+
+function Random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+//courtesy of some guy on stack, ur a legend man im too lazy to write this
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+init();
