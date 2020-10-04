@@ -11,8 +11,8 @@
 }
 
 body {
-    background-color: #dfdfdf;
-    color: rgb(37, 37, 37);
+    background-color: #292929;
+    color: rgb(192, 192, 192);
 }
 
 #question-box {
@@ -24,7 +24,7 @@ body {
     transform: translate(-50%, -50%);
 
     text-align: center;
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(70, 70, 70);
     box-shadow: 6px 6px rgb(122, 122, 122);
 }
 
@@ -76,6 +76,7 @@ body {
     border: none;
     outline: none;
     background-color: #7c7c7c00;
+    color: rgb(192, 192, 192);
 }
 
 #restart-button:hover {
@@ -85,6 +86,7 @@ body {
 
 .answer-button {
     background-color: #7c7c7c00;
+    color: rgb(192, 192, 192);
     border: none;
     outline: none;
     width: 100%;
