@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>kuuz</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
+</head>
+
+<body>
+    <div id="question-box">
+        <div id="question">question asofiajsdofijasoidfjaosidfjoiasd</div>
+        <div id="results-box">
+            <div id="house-description">House Description!!</div>
+            <button type="button" id="restart-button" onclick="Restart()">Restart</button>
+        </div>
+        <div id="answers-box">
+            <button type="button" class="answer-button" id="button0" onclick="pickAnswer(0)">answer 1</button>
+            <button type="button" class="answer-button" id="button1" onclick="pickAnswer(1)">answer 2</button>
+            <button type="button" class="answer-button" id="button2" onclick="pickAnswer(2)">answer 3</button>
+            <button type="button" class="answer-button" id="button3" onclick="pickAnswer(3)">answer 4</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="QuestionDatabase.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
