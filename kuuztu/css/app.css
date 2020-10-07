@@ -137,9 +137,9 @@ p {
 }
 
 .gradient-conqueror {
-    background: #e1eec393;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f0505393, #e1eec393);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f0505393, #e1eec393); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #f0505393;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e1eec393, #f0505393);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e1eec393, #f0505393); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 1 !important;
 }
 
