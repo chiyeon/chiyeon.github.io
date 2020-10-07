@@ -1,6 +1,18 @@
 * {
-    margin: auto;
+    margin: none;
     font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: rgb(232,203,192);
+    background: -moz-linear-gradient(90deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+    background: linear-gradient(90deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8cbc0",endColorstr="#636fa4",GradientType=1);
+}
+
+h1 {
+    font-size: 2.6vh;
 }
 
 .container-app {
@@ -12,8 +24,8 @@
 
 .container-quiz {
     display: flex;
-    width: 40%;
-    height: 85%;
+    width: 45vh;
+    height: 45vh;
     position:absolute;
     top: 0;
     bottom: 0;
@@ -22,25 +34,29 @@
     text-align: center;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(243, 243, 243);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .quiz-header {
     display: flex;
     width: 100%;
-    height: 20%;
-    border-bottom: 1px solid #e7eae0;
+    height: 30%;
+    background: #f0f0f0;
+    border-radius: 10px 10px 0px 0px;
     justify-content: center;
     align-items: center;
-    background-color: #e7eae0;
-    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.quiz-header > h1 {
+    height: 100%;
 }
 
 .quiz-main {
     display: flex;
     width: 100%;
-    height: 70%;
+    height: 100%;
     flex-flow: column;
     margin: auto;
 }
@@ -50,11 +66,39 @@
     width: 100%;
     height: 10%;
     justify-content: center;
-    border-top: 1px solid #e7eae0;
-    background: #e7eae0;
+    background: #f0f0f0;
     border-radius: 0px 0px 10px 10px;
 }
 
 .box-question {
-    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.box-answers {
+    height: 70%;
+    width: 100%;
+}
+
+.answer-button {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 25%;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.answer-button:nth-child(even) {
+    background-color: #dfdfdf;
+}
+
+.answer-button:hover {
+    background-color: #c9c9c9;
+    transition: 200ms;
 }

@@ -1,19 +1,17 @@
 <template>
   <div class="container-app">
     <div class="container-quiz">
-      <div class="quiz-header">
-        <h1>funny monkey gif</h1>
-      </div>
       <div class="quiz-main">
-        <div class="box-question">
-          <h2>travis scott burger</h2>
-          <p>{{ActiveQuestions[CurrentQuestion].question}}</p>
+        <div class="quiz-header">
+          <div class="box-question">
+            <h1>{{ActiveQuestions[CurrentQuestion].question}}</h1>
+          </div>
         </div>
         <div class="box-answers">
-          <button v-on:click="PickAnswer(0)">{{ActiveQuestions[CurrentQuestion].answers[0].answer}}</button>
-          <button v-on:click="PickAnswer(1)">{{ActiveQuestions[CurrentQuestion].answers[1].answer}}</button>
-          <button v-on:click="PickAnswer(2)">{{ActiveQuestions[CurrentQuestion].answers[2].answer}}</button>
-          <button v-on:click="PickAnswer(3)">{{ActiveQuestions[CurrentQuestion].answers[3].answer}}</button>
+          <button class="answer-button" v-on:click="PickAnswer(0)">{{ActiveQuestions[CurrentQuestion].answers[0].answer}}</button>
+          <button class="answer-button" v-on:click="PickAnswer(1)">{{ActiveQuestions[CurrentQuestion].answers[1].answer}}</button>
+          <button class="answer-button" v-on:click="PickAnswer(2)">{{ActiveQuestions[CurrentQuestion].answers[2].answer}}</button>
+          <button class="answer-button" v-on:click="PickAnswer(3)">{{ActiveQuestions[CurrentQuestion].answers[3].answer}}</button>
         </div>
       </div>
       <div class="quiz-footer">
@@ -62,7 +60,7 @@ export default {
         },
         {
           question: 'you lift bro?',
-          answers: [
+          answers: [ 
             {
               answer: 'sometimes',
               house: 'explorer',
@@ -111,7 +109,7 @@ export default {
           ]
         },
         {
-          question: 'One day, you\'ll be _______2',
+          question: 'This is a really long question. Well it may not be that long, but relative to the others. . .',
           answers: [
             {
               answer: 'a paper airplane',
