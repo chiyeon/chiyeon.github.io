@@ -129,6 +129,10 @@ p {
     background-color: #3F587F;
 }
 
+.color-travis {
+    background-color: #CC3642;
+}
+
 .gradient-explorer {
     background: #a1ffce93;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom right, #faffd193, #A1FFCE93);  /* Chrome 10-25, Safari 5.1-6 */
@@ -147,6 +151,13 @@ p {
     background: #6190E893;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom right, #A7BFE893, #6190E893);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom right, #A7BFE893, #6190E893); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 1 !important;
+}
+
+.gradient-travis {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2712193, #E9405793, #8A238793);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2712193, #E9405793, #8A238793); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 1 !important;
 }
 
