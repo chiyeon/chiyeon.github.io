@@ -49,7 +49,7 @@ p {
     border-radius: 10px 10px 0px 0px;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    /*transition: 1s;*/
 }
 
 .quiz-main {
@@ -67,7 +67,7 @@ p {
     justify-content: center;
     background: #f0f0f0;
     border-radius: 0px 0px 10px 10px;
-    transition: 1s;
+    /*transition: 1s;*/
 }
 
 .box-question {
@@ -84,7 +84,7 @@ p {
     height: 70%;
     width: 100%;
     background-color: #f0f0f0;
-    transition: 1s;
+    /*transition: 1s;*/
 }
 
 .box-results {
@@ -166,8 +166,8 @@ p {
 }
 
 .house-icon {
-    width: 25%;
-    padding-top: 7%;
+    width: 10vh;
+    padding-top: 3vh;
     text-align: center;
 }
 
@@ -176,4 +176,14 @@ p {
     height: 100vh;
     opacity: 0;
     transition: opacity 3s;
+}
+
+#retry-button {
+    width: 3vh;
+    transition: 200ms;
+    padding-bottom: 1vh;
+}
+
+#retry-button:hover {
+    opacity: 0.5;
 }
