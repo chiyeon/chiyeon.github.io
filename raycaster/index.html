@@ -12,9 +12,17 @@
          height: 100%;
          overflow: hidden;
       }
+      #canvas {
+         width: 100%
+      }
    </style>
 </head>
 <body>
+   Use WASD or the arrow keys to move around : )
+   <br>
+   <input type="checkbox" id="showMapToggle" name="toggle-map" checked="true">
+   <label for="toggle-map">Show 2D Map</label>
+   <br>
    <canvas id="canvas"></canvas>
 
    <script>
@@ -22,6 +30,7 @@
       const TARGET_FPS = 60;
       const canvas = document.getElementById('canvas');
       const ctx = canvas.getContext('2d');
+      const showMapToggle = document.getElementById('showMapToggle');
       const DR = 0.0174533;
       OnWindowResized();
 
@@ -39,8 +48,8 @@
       var keys = {};
 
       var player = {
-         x: canvas.width/2,
-         y: canvas.height/2,
+         x: canvas.width/12,
+         y: canvas.height/6,
          dx: 0,
          dy: 0,
          angle: 0,
@@ -57,22 +66,23 @@
       function render() {
          ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-         drawRays3D();
+         drawRays3D(showMapToggle.checked);
          
+         if(showMapToggle.checked) {
+            ctx.fillStyle = "#ff00ff";
+            ctx.fillRect(player.x,  player.y, player.width, player.width);
+            ctx.beginPath();
+            ctx.moveTo(player.x + player.width/2, player.y + player.width/2);
+            ctx.lineTo(player.x + player.dx * 15, player.y + player.dy * 15);
+            ctx.stroke();
 
-         ctx.fillStyle = "#ff00ff";
-         ctx.fillRect(player.x,  player.y, player.width, player.width);
-         ctx.beginPath();
-         ctx.moveTo(player.x + player.width/2, player.y + player.width/2);
-         ctx.lineTo(player.x + player.dx * 15, player.y + player.dy * 15);
-         ctx.stroke();
 
-
-         for(var x = 0; x < 8; x++) {
-            for(var y = 0; y < 8; y++) {
-               if(map[x  + y * 8] == 1) {
-                  ctx.fillStyle = "#121212";
-                  ctx.fillRect(x * 64, y * 64, 62, 62);
+            for(var x = 0; x < 8; x++) {
+               for(var y = 0; y < 8; y++) {
+                  if(map[x  + y * 8] == 1) {
+                     ctx.fillStyle = "#121212";
+                     ctx.fillRect(x * 64, y * 64, 62, 62);
+                  }
                }
             }
          }
@@ -111,7 +121,7 @@
          return (Math.sqrt((bx-ax)*(bx-ax) + (by-ay)*(by-ay)));
       }
 
-      function drawRays3D() {
+      function drawRays3D(drawPlayerRays) {
          var r,mx,my,mp,dof;
          var rx=0.0,ry=0.0,ra=0.0,xo=0.0,yo=0.0,disT=0.0;
          ra=player.angle-DR*30;
@@ -206,11 +216,13 @@
                disT=disH;
                ctx.fillStyle = "#ada489"
             }
-            ctx.strokeStyle = "#7f007f"
-            ctx.beginPath();
-            ctx.moveTo(player.x + player.width/2, player.y + player.width/2);
-            ctx.lineTo(rx, ry);
-            ctx.stroke();
+            if(drawPlayerRays) {
+               ctx.strokeStyle = "#7f007f"
+               ctx.beginPath();
+               ctx.moveTo(player.x + player.width/2, player.y + player.width/2);
+               ctx.lineTo(rx, ry);
+               ctx.stroke();
+            }
 
             //3d walls
             var ca=player.angle-ra;
