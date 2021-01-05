@@ -1,95 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>chiyeon</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/main-style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="assets/js/panels.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="assets/pictures/icon_ku.png">
-    <link href="main-style.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-    <script>
-      var elements = document.getElementsByClassName("page");
-      function FocusPage(pageID) {
-        for(var i = 0; i < elements.length; i++) {
-          if(elements[i].classList.contains("main")) {
-            var currPage = i;
-          }
-        }
-
-        for(var i = 0; i < elements.length; i++) {
-          if(i == pageID) {
-            elements[i].classList.add("main");
-            if(elements[i].classList.contains("hidden")) {
-              elements[i].classList.remove("hidden");
-            } else if(elements[i].classList.contains("hiding")) {
-              elements[i].classList.remove("hiding");
-            }
-          } else if(elements[i].classList.contains("main")) {
-            elements[i].classList.remove("main");
-            elements[i].classList.add("hiding");
-          } else if(elements[i].classList.contains("hiding")) {
-            elements[i].classList.remove("hiding");
-            elements[i].classList.add("hidden");
-          } else if(!elements[i].classList.contains("hidden")) {
-            elements[i].classList.add("hidden");
-          }
-        }
-      }
-    </script>
-
-    <div class="page main">
-      <div id="main-page">
-        <div id="title">
-          <h1>chiyeon</h1>
-          <img id="icon_ku" src="assets/pictures/icon_ku.png">
-
-          <h2>creator</h2>
-          <h2><i>SITE UNDER CONSTRUCTION</i></h2>
-        </div>
-        <div id="categories">
-           <div id="flex-box">
-             <button onclick="FocusPage(1)" id="flex-element">
-               games
-             </button>
-             <button onclick="FocusPage(2)" id="flex-element">
-               videos
-             </button>
-             <button onclick="FocusPage(3)" id="flex-element">
-               about
-             </button>
-           </div>
+    <title>chiyeon</title>
+</head>
+<body>
+  <div class="page main">
+    <div id="title">
+      <h1 id="title-text">chiyeon</h1>
+      <img id="icon_ku" src="assets/pictures/icon_ku.png" alt="chiyeon icon">
+    </div>
+    <div id="categories">
+      <button onclick="FocusPage(1)" id="flex-element">
+        games
+      </button>
+      <button onclick="FocusPage(2)" id="flex-element">
+        videos
+      </button>
+      <button onclick="FocusPage(3)" id="flex-element">
+        about
+      </button>
+    </div>
+  </div>
+  <div class="page hidden">
+    <div id="title">
+      <h1>games</h1>
+      <div id=games-container>
+        <div id="game">
         </div>
       </div>
+      <button onclick="FocusPage(0)" id="flex-element">back</button>
     </div>
-    <div class="page hidden">
+  </div>
+  <div class="page hidden">
+    <div id="title">
+      <h1>videos</h1>
+      <button onclick="FocusPage(0)" id="flex-element">back</button>
+    </div>
+  </div>
+  <div class="page hidden">
+    <div id="about-container">
       <div id="title">
-        <h1>games</h1>
-        <div id=games-container>
-          <div id="game">
-            <img src="assets/pictures/games/previews/preview.PNG">
-          </div>
-        </div>
+        <h1>about me</h1>
+        <p id="about-me">
+          I'm a self taught, 17 year old programmer and video creator. I make games, short films, music videos, and a pluthera of other random creations. Due to this all being a hobby, don't expect the most quality of products! 
+        </p>
+        
         <button onclick="FocusPage(0)" id="flex-element">back</button>
       </div>
     </div>
-    <div class="page hidden">
-      <div id="title">
-        <h1>videos</h1>
-        <button onclick="FocusPage(0)" id="flex-element">back</button>
-      </div>
-    </div>
-    <div class="page hidden">
-      <div id="about-container">
-        <div id="title">
-          <h1>about me</h1>
-          <p id="about-me">
-            I'm a self taught, 17 year old programmer and video creator. I make games, short films, music videos, and a pluthera of other random creations. Due to this all being a hobby, don't expect the most quality of products! 
-          </p>
-          
-          <button onclick="FocusPage(0)" id="flex-element">back</button>
-        </div>
-      </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

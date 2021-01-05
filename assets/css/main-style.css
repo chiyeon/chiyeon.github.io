@@ -1,10 +1,10 @@
-@font-face {
+@font-face { 
    font-family: renner;
-   src: url(../fonts/Renner.ttf);
- }
+   src: url(/assets/fonts/Renner.ttf);
+}
 
 body {
-   font-family: renner;
+   font-family: 'Josefin Sans', renner, sans-serif;
    background-color: #202040;
    color: rgb(248, 248, 248);
    margin: 0;
@@ -16,21 +16,15 @@ a {
    color: rgb(248, 248, 248);
 }
 
-h1 {
-   line-height: 5%;
+#title-text {
    font-size: 10vmin;
+   margin: 0;
+   font-weight: bold;
 }
 
 h2 {
-   line-height: 50%;
-   font-size: 3vmin;
-   font-weight: lighter;
-}
-
-#main-page {
-   text-align: center;
-   transition: 1s;
-   padding-top: 35vh;
+   font-size: 5vmin;
+   font-weight: bold;
 }
 
 #icon_ku {
@@ -41,13 +35,14 @@ h2 {
 }
 
 #about-container {
-   padding-top: 24vh;
+   text-align: center;
 }
 
-#flex-box {
+#categories {
    display: flex;
    flex-direction: row;
    justify-content: center;
+   cursor: context-menu;
 }
 
 #flex-element {
@@ -66,7 +61,6 @@ h2 {
 
    opacity: 1;
    animation: fade 1s linear;
-   
 }
 
 #flex-element:hover {
@@ -75,7 +69,6 @@ h2 {
 
 #title {
    text-align: center;
-   padding-top: 3vh;
 }
 
 #about-me {
@@ -116,6 +109,10 @@ button:hover {
 .page {
    width: 100vw;
    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
 
 .main {
