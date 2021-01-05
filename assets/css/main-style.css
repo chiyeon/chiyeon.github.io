@@ -5,15 +5,11 @@
 
 body {
    font-family: 'Josefin Sans', renner, sans-serif;
-   background-color: #202040;
-   color: rgb(248, 248, 248);
    margin: 0;
    padding: 0;
    overflow: hidden;
-}
 
-a {
-   color: rgb(248, 248, 248);
+   transition: 500ms all;
 }
 
 #title-text {
@@ -29,8 +25,9 @@ h2 {
 
 #icon_ku {
    position: absolute;
-   transform: translate(-50%, -135%);
+   transform: translate(-50%, -115%);
    width: 16vmin;
+   height: auto;
    z-index: -1;
 }
 
@@ -45,11 +42,10 @@ h2 {
    cursor: context-menu;
 }
 
-#flex-element {
+#category-element {
    width: 9.6vmin;
    padding-top: 1%;
    text-align: center;
-   color: rgb(248, 248, 248);
    text-decoration: none;
    background: none;
    border: 0;
@@ -61,9 +57,11 @@ h2 {
 
    opacity: 1;
    animation: fade 1s linear;
+
+   transition: 500ms all;
 }
 
-#flex-element:hover {
+#category-element:hover {
    text-decoration: underline;
 }
 
@@ -168,3 +166,27 @@ button:hover {
       bottom: 0vh;
    }
 }
+
+#darkmode-toggle-container {
+   position: absolute;
+   padding: 1%;
+   z-index: 1;
+   bottom: 0;
+   right: 0;
+}
+
+#darkmode-toggle {
+   background-color: rgb(63, 63, 63);
+   font-size: 1.5vmin;
+   border: 4px #6d6d6d;
+   padding: 6px 8px;
+   border-radius: 500px;
+   color: white;
+   transition: 250ms background-color;
+}
+
+#darkmode-toggle:hover {
+   background-color: rgb(104, 104, 104);
+}
+
+

@@ -6,28 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="assets/css/main-style.css" rel="stylesheet" type="text/css"/>
+    <link id="color-mode-style" href="assets/css/light-mode.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="assets/js/panels.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="assets/pictures/icon_ku.png">
+    <link rel="icon" href="/assets/pictures/icon_lightmode.png">
     <title>chiyeon</title>
 </head>
 <body>
+  <div id="darkmode-toggle-container">
+    <button id="darkmode-toggle" onclick="toggleDarkmode()">Dark Mode</button>
+  </div>
+
   <div class="page main">
     <div id="title">
       <h1 id="title-text">chiyeon</h1>
-      <img id="icon_ku" src="assets/pictures/icon_ku.png" alt="chiyeon icon">
+      <img id="icon_ku" src="/assets/pictures/icon_lightmode.png" alt="chiyeon icon">
     </div>
     <div id="categories">
-      <button onclick="FocusPage(1)" id="flex-element">
+      <button onclick="FocusPage(1)" id="category-element">
         games
       </button>
-      <button onclick="FocusPage(2)" id="flex-element">
+      <button onclick="FocusPage(2)" id="category-element">
         videos
       </button>
-      <button onclick="FocusPage(3)" id="flex-element">
+      <button onclick="FocusPage(3)" id="category-element">
         about
       </button>
     </div>
@@ -39,13 +44,13 @@
         <div id="game">
         </div>
       </div>
-      <button onclick="FocusPage(0)" id="flex-element">back</button>
+      <button onclick="FocusPage(0)" id="category-element">back</button>
     </div>
   </div>
   <div class="page hidden">
     <div id="title">
       <h1>videos</h1>
-      <button onclick="FocusPage(0)" id="flex-element">back</button>
+      <button onclick="FocusPage(0)" id="category-element">back</button>
     </div>
   </div>
   <div class="page hidden">
@@ -56,10 +61,12 @@
           I'm a self taught, 17 year old programmer and video creator. I make games, short films, music videos, and a pluthera of other random creations. Due to this all being a hobby, don't expect the most quality of products! 
         </p>
         
-        <button onclick="FocusPage(0)" id="flex-element">back</button>
+        <button onclick="FocusPage(0)" id="category-element">back</button>
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="assets/js/darkmode-toggle.js"></script>
 </body>
 
 </html>
