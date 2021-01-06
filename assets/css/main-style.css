@@ -36,10 +36,6 @@ h2 {
    z-index: -1;
 }
 
-#about-container {
-   text-align: center;
-}
-
 #apps-container {
    text-align: center;
 }
@@ -85,6 +81,21 @@ h2 {
    min-width: 400px;
    max-width: 500px;
    text-align: center;
+}
+
+#links-container {
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+
+#links-container a img {
+   max-width: 40px;
+   min-width: 20px;
+   transition: 200ms opacity;
+}
+
+#links-container a img:hover {
+   opacity: 0.5;
 }
 
 #games-container {
