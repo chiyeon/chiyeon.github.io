@@ -11,10 +11,10 @@
 }
 
 body {
-   transition: background-color 500ms ease, color 200ms ease;
-   -webkit-transition: background-color 500ms ease, color 200ms ease;
-   -moz-transition: background-color 500ms ease, color 200ms ease;
-   -o-transition: background-color 500ms ease, color 200ms ease;
+   transition: background-color 500ms ease, color 500ms ease;
+   -webkit-transition: background-color 500ms ease, color 500ms ease;
+   -moz-transition: background-color 500ms ease, color 500ms ease;
+   -o-transition: background-color 500ms ease, color 500ms ease;
 }
 
 #title-text {
