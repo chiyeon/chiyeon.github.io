@@ -271,7 +271,7 @@ button:hover {
 }
 
 .grid .label p {
-   font-size: 2vh;
+   font-size: 2vmin;
    color: white;
    word-wrap: break-word;
 }
