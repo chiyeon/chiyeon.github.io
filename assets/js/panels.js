@@ -12,9 +12,9 @@ function FocusPage(pageID) {
       if(i == pageID) {
          elements[i].classList.add("main");
          if(elements[i].classList.contains("hidden")) {
-         elements[i].classList.remove("hidden");
+            elements[i].classList.remove("hidden");
          } else if(elements[i].classList.contains("hiding")) {
-         elements[i].classList.remove("hiding");
+            elements[i].classList.remove("hiding");
          }
       } else if(elements[i].classList.contains("main")) {
          elements[i].classList.remove("main");

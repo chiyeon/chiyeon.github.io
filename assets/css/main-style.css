@@ -43,8 +43,7 @@ h2 {
 }
 
 #category-element {
-   width: 9.6vmin;
-   padding-top: 1%;
+   width: 7.6vmin;
    text-align: center;
    text-decoration: none;
    background: none;
@@ -74,7 +73,6 @@ h2 {
    position: relative;
    width: 40vw;
    text-align: center;
-   left: 30vw;
 }
 
 #games-container {
@@ -115,55 +113,56 @@ button:hover {
 
 .main {
    position: fixed;
-   bottom: 0;
+   top: 0;
    animation: move-in 1s;
+   -webkit-animation: 1s move-in;
 }
 
 .hiding {
    position: absolute;
-   bottom: 100vh;
+   top: 100vh;
    animation: move-out 1s;
    -webkit-animation: 1s move-out;
 }
 
 .hidden {
    position: absolute;
-   bottom: 100vh;
+   top: 100vh;
 }
 
 @keyframes move-out {
    0% {
-      bottom: 0vh;
+      top: 0vh;
    }
    100% {
-      bottom: -100vh;
+      top: -100vh;
    }
 }
 
 @-webkit-keyframes move-out {
    0% {
-      bottom: 0vh;
+      top: 0vh;
    }
    100% {
-      bottom: -100vh;
+      top: -100vh;
    }
 }
 
 @keyframes move-in {
    0% {
-      bottom: 100vh;
+      top: 100vh;
    }
    100% {
-      bottom: 0vh;
+      top: 0vh;
    }
 }
 
 @-webkit-keyframes move-in {
    0% {
-      bottom: 100vh;
+      top: 100vh;
    }
    100% {
-      bottom: 0vh;
+      top: 0vh;
    }
 }
 
