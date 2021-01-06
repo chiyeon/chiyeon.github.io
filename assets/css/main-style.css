@@ -8,8 +8,13 @@
    margin: 0;
    padding: 0;
    overflow: hidden;
+}
 
-   transition: 500ms all;
+body {
+   transition: background-color 500ms ease, color 200ms ease;
+   -webkit-transition: background-color 500ms ease, color 200ms ease;
+   -moz-transition: background-color 500ms ease, color 200ms ease;
+   -o-transition: background-color 500ms ease, color 200ms ease;
 }
 
 #title-text {
@@ -60,8 +65,6 @@ h2 {
 
    opacity: 1;
    animation: fade 1s linear;
-
-   transition: 500ms all;
 
    cursor: pointer;
 }
@@ -191,6 +194,9 @@ button:hover {
    border-radius: 500px;
    color: white;
    transition: 250ms background-color;
+   -webkit-transition: 250ms background-color;
+   -moz-transition: 250ms background-color;
+   -o-transition: 250ms background-color;
 }
 
 #darkmode-toggle:hover {
@@ -203,8 +209,8 @@ button:hover {
    display: grid;
    width: 70vw;
    grid-gap: 15px;
-   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-   grid-template-rows: repeat(auto-fit, minmax(37.5px, 200px));
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
 }
 
 .grid {
@@ -222,6 +228,11 @@ button:hover {
    filter: saturate(0.5);
    object-fit: cover;
    max-height: 100%;
+   min-width: 100%;
+   transition: 500ms all;
+   -webkit-transition: 500ms all;
+   -moz-transition: 500ms all;
+   -o-transition: 500ms all;
 }
 
 .grid:hover img {
@@ -229,21 +240,25 @@ button:hover {
    max-height: 106%;
 }
 
-.grid:hover .label {
-   background-color: rgba(35, 35, 35, 0.75);
-}
-
 .grid .label {
    position: absolute;
-   width: auto;
    padding: 6px 8px;
    background-color: rgba(35, 35, 35, 0.5);
    border-radius: 16px;
+   transition: 500ms all;
+   -webkit-transition: 500ms all;
+   -moz-transition: 500ms all;
+   -o-transition: 500ms all;
+}
+
+.grid:hover .label {
+   background-color: rgba(35, 35, 35, 0.75);
 }
 
 .grid .label p {
    font-size: 3vmin;
    color: white;
+   word-wrap: break-word;
 }
 
 
