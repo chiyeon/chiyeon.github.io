@@ -125,16 +125,14 @@ button:hover {
 
 .main {
    position: fixed;
-   top: 0;
    animation: move-in 1s;
-   -webkit-animation: 1s move-in;
+   animation-fill-mode: both;
 }
 
 .hiding {
    position: absolute;
-   top: 100vh;
    animation: move-out 1s;
-   -webkit-animation: 1s move-out;
+   animation-fill-mode: both;
 }
 
 .hidden {
@@ -144,37 +142,28 @@ button:hover {
 
 @keyframes move-out {
    0% {
-      top: 0vh;
+      transform: translateY(0vh);
    }
    100% {
-      top: -100vh;
-   }
-}
-
-@-webkit-keyframes move-out {
-   0% {
-      top: 0vh;
-   }
-   100% {
-      top: -100vh;
+      transform: translateY(100vh);
    }
 }
 
 @keyframes move-in {
    0% {
-      top: 100vh;
+      transform: translateY(-100vh);
    }
    100% {
-      top: 0vh;
+      transform: translateY(0vh);
    }
 }
 
 @-webkit-keyframes move-in {
    0% {
-      top: 100vh;
+      transform: translateY(100vh);
    }
    100% {
-      top: 0vh;
+      transform: translateY(0vh);
    }
 }
 
