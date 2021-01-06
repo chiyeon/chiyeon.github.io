@@ -3,7 +3,7 @@
    src: url(/assets/fonts/Renner.ttf);
 }
 
-body {
+* {
    font-family: 'Josefin Sans', renner, sans-serif;
    margin: 0;
    padding: 0;
@@ -32,6 +32,10 @@ h2 {
 }
 
 #about-container {
+   text-align: center;
+}
+
+#apps-container {
    text-align: center;
 }
 
@@ -66,12 +70,15 @@ h2 {
 
 #title {
    text-align: center;
+   margin: none;
 }
 
 #about-me {
    font-size: 2.15vh;
    position: relative;
    width: 40vw;
+   min-width: 400px;
+   max-width: 500px;
    text-align: center;
 }
 
@@ -186,6 +193,54 @@ button:hover {
 
 #darkmode-toggle:hover {
    background-color: rgb(104, 104, 104);
+}
+
+#games-container {
+   padding-top: 6%;
+   padding-bottom: 6%;
+   display: grid;
+   width: 70vw;
+   grid-gap: 15px;
+   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   grid-template-rows: repeat(auto-fit, minmax(37.5px, 200px));
+}
+
+.game {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   border-radius: 17px;
+}
+
+.game img {
+   flex-shrink: 0;
+   min-width: 100%;
+   min-height: 100%;
+   filter: saturate(0.5);
+}
+
+.game:hover img {
+   filter: saturate(1);
+}
+
+.game:hover .label {
+   background-color: rgb(70, 70, 70);
+}
+
+.game .label {
+   position: absolute;
+   width: auto;
+   padding: 6px 8px;
+   background-color: rgba(70, 70, 70, 0.75);
+   border-radius: 16px;
+}
+
+.game .label p {
+   font-size: 3vmin;
+   color: white;
 }
 
 
