@@ -209,8 +209,8 @@ button:hover {
    min-width: 70vw;
    grid-gap: 15px;
    max-height: 60vh;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+   grid-template-columns: 1fr 1fr 1fr;
    grid-column: span 2;
    object-fit: contain;
 }
