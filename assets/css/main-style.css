@@ -204,10 +204,9 @@ button:hover {
 }
 
 #grid-container {
-   padding-top: 4%;
-   padding-bottom: 6%;
+   padding: 4%;
    display: grid;
-   width: 70vw;
+   min-width: 70vw;
    grid-gap: 15px;
    max-height: 70vh;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -232,6 +231,7 @@ button:hover {
    object-fit: cover;
    max-height: 100%;
    min-height: 100%;
+   min-width: 100%;
    transition: 500ms all;
    -webkit-transition: 500ms all;
    -moz-transition: 500ms all;
@@ -241,6 +241,7 @@ button:hover {
 .grid:hover img {
    filter: saturate(1);
    min-height: 106%;
+   min-width: 106%;
 }
 
 .grid .label {
