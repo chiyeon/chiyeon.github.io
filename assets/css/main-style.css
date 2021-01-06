@@ -36,10 +36,6 @@ h2 {
    z-index: -1;
 }
 
-#apps-container {
-   text-align: center;
-}
-
 #categories {
    display: flex;
    flex-direction: row;
@@ -204,9 +200,10 @@ button:hover {
 }
 
 #grid-container {
-   padding: 4%;
+   padding: 16px;
    display: grid;
-   min-width: 70vw;
+   min-width: 15vw;
+   max-width: 1000px;
    grid-gap: 15px;
    max-height: 60vh;
    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
