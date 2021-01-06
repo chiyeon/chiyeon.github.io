@@ -193,13 +193,16 @@ button:hover {
 }
 
 #grid-container {
-   padding-top: 6%;
+   padding-top: 4%;
    padding-bottom: 6%;
    display: grid;
    width: 70vw;
    grid-gap: 15px;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
+   max-height: 70vh;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-template-rows: repeat(auto-fit, minmax(50px, 0.5fr));
+   grid-column: span 2;
+   object-fit: contain;
 }
 
 .grid {
@@ -217,7 +220,7 @@ button:hover {
    filter: saturate(0.5);
    object-fit: cover;
    max-height: 100%;
-   min-width: 100%;
+   min-height: 100%;
    transition: 500ms all;
    -webkit-transition: 500ms all;
    -moz-transition: 500ms all;
@@ -226,14 +229,14 @@ button:hover {
 
 .grid:hover img {
    filter: saturate(1);
-   max-height: 106%;
+   min-height: 106%;
 }
 
 .grid .label {
    position: absolute;
    padding: 6px 8px;
    background-color: rgba(35, 35, 35, 0.5);
-   border-radius: 16px;
+   border-radius: 12px;
    transition: 500ms all;
    -webkit-transition: 500ms all;
    -moz-transition: 500ms all;
@@ -245,7 +248,7 @@ button:hover {
 }
 
 .grid .label p {
-   font-size: 3vmin;
+   font-size: 2vmin;
    color: white;
    word-wrap: break-word;
 }
