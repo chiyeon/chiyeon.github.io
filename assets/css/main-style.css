@@ -145,13 +145,13 @@ button:hover {
       transform: translateY(0vh);
    }
    100% {
-      transform: translateY(100vh);
+      transform: translateY(-100vh);
    }
 }
 
 @keyframes move-in {
    0% {
-      transform: translateY(-100vh);
+      transform: translateY(100vh);
    }
    100% {
       transform: translateY(0vh);
@@ -160,7 +160,7 @@ button:hover {
 
 @-webkit-keyframes move-in {
    0% {
-      transform: translateY(100vh);
+      transform: translateY(-100vh);
    }
    100% {
       transform: translateY(0vh);
