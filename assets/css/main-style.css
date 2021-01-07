@@ -173,19 +173,6 @@ button:hover {
    }
 }
 
-@-webkit-keyframes move-in {
-   0% {
-      transform: translateY(-100vh);
-      -webkit-transform: translateY(-100vh);
-      -moz-transform: translateY(-100vh);
-   }
-   100% {
-      transform: translateY(0vh);
-      -webkit-transform: translateY(0vh);
-      -moz-transform: translateY(0vh);
-   }
-}
-
 #darkmode-toggle-container {
    position: absolute;
    padding: 1%;
