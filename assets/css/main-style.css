@@ -36,14 +36,6 @@ h2 {
    z-index: -1;
 }
 
-#about-container {
-   text-align: center;
-}
-
-#apps-container {
-   text-align: center;
-}
-
 #categories {
    display: flex;
    flex-direction: row;
@@ -52,7 +44,7 @@ h2 {
 }
 
 #category-element {
-   width: 7.6vmin;
+   padding: 8px;
    text-align: center;
    text-decoration: none;
    background: none;
@@ -61,7 +53,7 @@ h2 {
 
    outline: 0;
    font-family: renner;
-   font-size: 2.15vmin;
+   font-size: 2.15vh;
 
    opacity: 1;
    animation: fade 1s linear;
@@ -80,11 +72,26 @@ h2 {
 
 #about-me {
    font-size: 2.15vh;
+   padding: 16px;
    position: relative;
-   width: 40vw;
-   min-width: 400px;
-   max-width: 500px;
+   min-width: 200px;
+   max-width: 600px;
    text-align: center;
+}
+
+#links-container {
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+
+#links-container a img {
+   max-width: 40px;
+   min-width: 20px;
+   transition: 200ms opacity;
+}
+
+#links-container a img:hover {
+   opacity: 0.5;
 }
 
 #games-container {
@@ -143,27 +150,39 @@ button:hover {
 @keyframes move-out {
    0% {
       transform: translateY(0vh);
+      -webkit-transform: translateY(0vh);
+      -moz-transform: translateY(0vh);
    }
    100% {
       transform: translateY(-100vh);
+      -webkit-transform: translateY(-100vh);
+      -moz-transform: translateY(-100vh);
    }
 }
 
 @keyframes move-in {
    0% {
       transform: translateY(100vh);
+      -webkit-transform: translateY(100vh);
+      -moz-transform: translateY(100vh);
    }
    100% {
       transform: translateY(0vh);
+      -webkit-transform: translateY(0vh);
+      -moz-transform: translateY(0vh);
    }
 }
 
 @-webkit-keyframes move-in {
    0% {
       transform: translateY(-100vh);
+      -webkit-transform: translateY(-100vh);
+      -moz-transform: translateY(-100vh);
    }
    100% {
       transform: translateY(0vh);
+      -webkit-transform: translateY(0vh);
+      -moz-transform: translateY(0vh);
    }
 }
 
@@ -177,7 +196,7 @@ button:hover {
 
 #darkmode-toggle {
    background-color: rgb(63, 63, 63);
-   font-size: 1.5vmin;
+   font-size: 1.5vh;
    border: 4px #6d6d6d;
    padding: 6px 8px;
    border-radius: 500px;
@@ -193,13 +212,16 @@ button:hover {
 }
 
 #grid-container {
-   padding-top: 6%;
-   padding-bottom: 6%;
+   padding: 16px;
    display: grid;
-   width: 70vw;
+   min-width: 15vw;
+   max-width: 1000px;
    grid-gap: 15px;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
+   max-height: 60vh;
+   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-column: span 2;
+   object-fit: contain;
 }
 
 .grid {
@@ -217,6 +239,7 @@ button:hover {
    filter: saturate(0.5);
    object-fit: cover;
    max-height: 100%;
+   min-height: 100%;
    min-width: 100%;
    transition: 500ms all;
    -webkit-transition: 500ms all;
@@ -226,14 +249,17 @@ button:hover {
 
 .grid:hover img {
    filter: saturate(1);
-   max-height: 106%;
+   min-height: 106%;
+   min-width: 106%;
 }
 
 .grid .label {
    position: absolute;
+   text-align: center;
    padding: 6px 8px;
+   margin: 12px;
    background-color: rgba(35, 35, 35, 0.5);
-   border-radius: 16px;
+   border-radius: 12px;
    transition: 500ms all;
    -webkit-transition: 500ms all;
    -moz-transition: 500ms all;
@@ -245,7 +271,7 @@ button:hover {
 }
 
 .grid .label p {
-   font-size: 3vmin;
+   font-size: 2vmin;
    color: white;
    word-wrap: break-word;
 }

@@ -6,3 +6,7 @@ body {
 #category-element {
    color: #1b1b1b;
 }
+
+#links-container a img {
+   filter: invert(0);
+}
