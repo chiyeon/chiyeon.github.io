@@ -37,3 +37,4 @@ function PlayVideo(title, tagline, videoID) {
    // focus page 5 which is the video player
    FocusPage(5);
 }
+
