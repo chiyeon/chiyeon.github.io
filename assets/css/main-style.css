@@ -219,6 +219,7 @@ button:hover {
    align-items: center;
    overflow: hidden;
    border-radius: 17px;
+   cursor: pointer;
 }
 
 .grid img {
@@ -241,8 +242,9 @@ button:hover {
 }
 
 .grid .label {
-   position: absolute;
+   position: fixed;
    text-align: center;
+   max-width: 20vmin;
    padding: 6px 8px;
    margin: 12px;
    background-color: rgba(35, 35, 35, 0.5);
@@ -254,7 +256,7 @@ button:hover {
 }
 
 .grid:hover .label {
-   background-color: rgba(35, 35, 35, 0.75);
+   background-color: rgba(35, 35, 35, 0.9);
 }
 
 .grid .label p {
