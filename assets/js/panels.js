@@ -27,3 +27,13 @@ function FocusPage(pageID) {
       }
    }
 }
+
+function PlayVideo(title, tagline, videoID) {
+   // set the title, tagline, and iframe data of video player
+   document.getElementById("video-player-title").textContent = title;
+   document.getElementById("video-player-tagline").textContent = tagline;
+   document.getElementById("video-player").src = `https://www.youtube.com/embed/${videoID}`;
+
+   // focus page 5 which is the video player
+   FocusPage(5);
+}

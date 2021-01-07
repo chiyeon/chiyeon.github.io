@@ -21,6 +21,7 @@
     <button id="darkmode-toggle" onclick="toggleDarkmode()">Dark</button>
   </div>
 
+  <!-- 0 - title -->
   <div class="page main">
     <div id="title">
       <h1 id="title-text">chiyeon</h1>
@@ -41,6 +42,8 @@
       </button>
     </div>
   </div>
+  
+  <!-- 1 - games -->
   <div class="page hidden">
     <h1>games</h1>
       <div id="grid-container">
@@ -89,68 +92,72 @@
       </div>
     <button onclick="FocusPage(0)" id="category-element">back</button>
   </div>
+  
+  <!-- 2 - videos -->
   <div class="page hidden">
     <h1>videos</h1>
     <div id="grid-container">
-      <a class="grid" href="https://www.youtube.com/watch?v=ZJoaCvSmqDA" target="_blank">
+      <div class="grid" onclick="PlayVideo('You are You', 'psa', 'ZJoaCvSmqDA')" target="_blank">
         <img src="assets/pictures/videos/youareyou.jpg" alt="you are you preview">
         <div class="label">
           <p>You are You</p>
           <p class="label-tagline">psa</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=hzECkv0sDbQ" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('Automation & the Industry', 'Documentary', 'hzECkv0sDbQ')" target="_blank">
         <img src="assets/pictures/videos/automation.jpg" alt="automation preview">
         <div class="label">
           <p>Automation & the Industry</p>
           <p class="label-tagline">documentary</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=CWaM6kuG8aU" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('indigo', 'music video', 'CWaM6kuG8aU')" target="_blank">
         <img src="assets/pictures/videos/indigo.jpg" alt="indigo preview">
         <div class="label">
           <p>INDIGO</p>
           <p class="label-tagline">music video</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=cmDOEzepK3M" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('sanctuary', 'music video', 'cmDOEzepK3M')" target="_blank">
         <img src="assets/pictures/videos/sanctuary.jpg" alt="sanctuary preview">
         <div class="label">
           <p>sanctuary</p>
           <p class="label-tagline">music video</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=wBR36EJGgAQ" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('shoota', 'music video', 'wBR36EJGgAQ')" target="_blank">
         <img src="assets/pictures/videos/shoota.jpg" alt="shoota preview">
         <div class="label">
           <p>shoota</p>
           <p class="label-tagline">music video</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=DDU8BJHVfuc" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('fantasy', 'music video', 'DDU8BJHVfuc')" target="_blank">
         <img src="assets/pictures/videos/fantasy.jpg" alt="fantasy preview">
         <div class="label">
           <p>fantasy</p>
           <p class="label-tagline">music video</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=VHBsB96DAAw" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('u say im in luv', 'music video', 'VHBsB96DAAw')" target="_blank">
         <img src="assets/pictures/videos/usayiminluv.jpg" alt="u say in in luv preview">
         <div class="label">
           <p>u say im in luv</p>
           <p class="label-tagline">music video</p>
         </div>
-      </a>
-      <a class="grid" href="https://www.youtube.com/watch?v=ThNS7Bo2_s4" target="_blank">
+      </div>
+      <div class="grid" onclick="PlayVideo('onigiri', 'cooking video', 'ThNS7Bo2_s4')" target="_blank">
         <img src="assets/pictures/videos/onigiri.jpg" alt="onigiri preview">
         <div class="label">
           <p>onigiri</p>
           <p class="label-tagline">cooking video</p>
         </div>
-      </a>
+      </div>
     </div>
     <button onclick="FocusPage(0)" id="category-element">back</button>
   </div>
+  
+  <!-- 3 - about -->
   <div class="page hidden">
     <div id="about-me">
       <h1>about me</h1>
@@ -167,6 +174,8 @@
     </div>
     <button onclick="FocusPage(0)" id="category-element">back</button>
   </div>
+  
+  <!-- 4 - apps -->
   <div class="page hidden">
     <h1>apps</h1>
     <div id="grid-container">
@@ -214,6 +223,19 @@
       </a>
     </div>
     <button onclick="FocusPage(0)" id="category-element">back</button>
+  </div>
+
+  <!-- 5 - video player -->
+  <div class="page hidden">
+    <h1 id="video-player-title">video title</h1>
+    <p id="video-player-tagline">tagline</p>
+    <div id="video-player-container">
+      <iframe id="video-player" title="video" width="100%" allowfullscreen></iframe>
+    </div>
+    <div>
+      <!--button onclick="open about page here" id="category-element">about</button-->
+      <button onclick="FocusPage(2)" id="category-element">back</button>
+    </div>
   </div>
 </body>
 

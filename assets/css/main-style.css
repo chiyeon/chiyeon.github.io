@@ -281,4 +281,21 @@ button:hover {
    font-size: 2vmin !important;
 }
 
+#video-player-container {
+   margin-top: 4vmin;
+   margin-bottom: 4vmin;
+   position: relative;
+   width: 80vmin;
+   height: 45vmin;
+}
+
+#video-player {
+   height: 100%;
+   position: absolute;
+}
+
+#video-player-tagline {
+   font-style: italic;
+}
+
 
