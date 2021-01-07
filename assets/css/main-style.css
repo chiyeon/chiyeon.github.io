@@ -281,6 +281,8 @@ button:hover {
 #video-player {
    height: 100%;
    position: absolute;
+   border: none;
+   border-radius: 12px;
 }
 
 #video-player-tagline {
