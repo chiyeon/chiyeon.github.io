@@ -43,7 +43,8 @@ function pickAnswer(answer) {
         userData[currentQuestion.answers[answer].house] += currentQuestion.answers[answer].value;
     }
 
-    index++;
+    if(index < numTotalQuestions)
+        index++;
 
     //update the progress bar
     var percentComplete = (index ) / numTotalQuestions * 100;

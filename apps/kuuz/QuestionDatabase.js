@@ -19,19 +19,19 @@ QuestionDatabase.push(CreateQuestion(
     "What came in the mail today?",
     [
         CreateAnswer("a paper airplane", "explorer", 1),
-        CreateAnswer("thoist testicles", "conqueror", 1),
+        CreateAnswer("a knife", "conqueror", 1),
         CreateAnswer("a mirror", "visionary", 1),
-        CreateAnswer("deez nuts", "explorer", 1.5)
+        CreateAnswer("a camera to vlog", "explorer", 1.5)
     ]
 ));
 
 QuestionDatabase.push(CreateQuestion(
     "What were you doing last night?",
     [
-        CreateAnswer("sleeping", "explorer", 1),
-        CreateAnswer("going to buy some donuts", "conqueror", 1),
-        CreateAnswer("touching Justin Mendoza", "visionary", 1),
-        CreateAnswer("off on an adventure", "explorer", 1.5)
+        CreateAnswer("drawing", "explorer", 1),
+        CreateAnswer("buying donuts", "conqueror", 1),
+        CreateAnswer("sleeping", "visionary", 1),
+        CreateAnswer("traveling", "explorer", 1.5)
     ]
 ));
 
@@ -48,18 +48,18 @@ QuestionDatabase.push(CreateQuestion(
 QuestionDatabase.push(CreateQuestion(
     "How did the duck feel crossing the road?",
     [
-        CreateAnswer("like a fortnite burgor", "explorer", 1),
-        CreateAnswer("horny", "conqueror", 1),
-        CreateAnswer("funny monkey gif", "visionary", 1),
-        CreateAnswer("murderous", "conqueror", 1.5)
+        CreateAnswer("curious", "explorer", 1),
+        CreateAnswer("at ease", "conqueror", 1),
+        CreateAnswer("cautious", "visionary", 1),
+        CreateAnswer("rushed", "conqueror", 1.5)
     ]
 ));
 
 QuestionDatabase.push(CreateQuestion(
-    "What did you make for dinner?",
+    "What are you eating tonight?",
     [
         CreateAnswer("a sandwich", "explorer", 1),
-        CreateAnswer("remi from rattatoulie", "conqueror", 1),
+        CreateAnswer("two sandwiches", "conqueror", 1),
         CreateAnswer("a salad", "visionary", 1),
         CreateAnswer("a five course dinner", "visionary", 1.5)
     ]
@@ -68,10 +68,10 @@ QuestionDatabase.push(CreateQuestion(
 QuestionDatabase.push(CreateQuestion(
     "When you grow up, your job will be",
     [
-        CreateAnswer("listening to music", "explorer", 1),
-        CreateAnswer("playing fortnite", "conqueror", 1),
-        CreateAnswer("painting rocks", "visionary", 1),
-        CreateAnswer("charging batteries", "visionary", 1.5)
+        CreateAnswer("making music", "explorer", 1),
+        CreateAnswer("going to space", "conqueror", 1),
+        CreateAnswer("teaching", "visionary", 1),
+        CreateAnswer("behind a desk. Realistically.", "visionary", 1.5)
     ]
 ));
 
@@ -79,18 +79,18 @@ QuestionDatabase.push(CreateQuestion(
     "I'm going to ____ one day.",
     [
         CreateAnswer("study culinary arts", "explorer", 1),
-        CreateAnswer("have sex", "conqueror", 1),
-        CreateAnswer("eat the travis scott burger", "visionary", 1),
+        CreateAnswer("learn to fence", "conqueror", 1),
+        CreateAnswer("write a book", "visionary", 1),
         CreateAnswer("touch travis scott", "visionary", 1.5),
     ]
 ))
 
 QuestionDatabase.push(CreateQuestion(
-    "______ is my favorite childhood memory.",
+    "Whats your favorite number ?",
     [
-        CreateAnswer("The Travis Scott Burger", "explorer", 1),
-        CreateAnswer("Playing Fortnite", "conqueror", 1),
-        CreateAnswer("Playing Valorant", "visionary", 1),
-        CreateAnswer("Being born", "conqueror", 1.5),
+        CreateAnswer("7", "explorer", 1),
+        CreateAnswer("1", "conqueror", 1),
+        CreateAnswer("6", "visionary", 1),
+        CreateAnswer("9", "conqueror", 1.5),
     ]
 ))
