@@ -32,9 +32,12 @@ function PlayVideo(title, tagline, videoID) {
    // set the title, tagline, and iframe data of video player
    document.getElementById("video-player-title").textContent = title;
    document.getElementById("video-player-tagline").textContent = tagline;
-   document.getElementById("video-player").src = `https://www.youtube.com/embed/${videoID}`;
+   document.getElementById("video-player").src = `https://www.youtube.com/embed/${videoID}?enablejsapi=1&version=3&playerapiid=ytplayer`;
 
    // focus page 5 which is the video player
    FocusPage(5);
 }
 
+function StopVideo() {
+   document.getElementById("video-player").contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+}
