@@ -229,10 +229,10 @@ button:hover {
    max-height: 100%;
    min-height: 100%;
    min-width: 100%;
-   transition: 500ms all;
-   -webkit-transition: 500ms all;
-   -moz-transition: 500ms all;
-   -o-transition: 500ms all;
+   transition: 350ms all;
+   -webkit-transition: 350ms all;
+   -moz-transition: 350ms all;
+   -o-transition: 350ms all;
 }
 
 .grid:hover img {
@@ -249,10 +249,10 @@ button:hover {
    margin: 12px;
    background-color: rgba(35, 35, 35, 0.5);
    border-radius: 12px;
-   transition: 500ms all;
-   -webkit-transition: 500ms all;
-   -moz-transition: 500ms all;
-   -o-transition: 500ms all;
+   transition: 350ms all;
+   -webkit-transition: 350ms all;
+   -moz-transition: 350ms all;
+   -o-transition: 350ms all;
 }
 
 .grid:hover .label {
