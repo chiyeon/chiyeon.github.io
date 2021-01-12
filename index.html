@@ -227,14 +227,28 @@
 
   <!-- 5 - video player -->
   <div class="page hidden">
-    <h1 id="video-player-title">video title</h1>
-    <p id="video-player-tagline">tagline</p>
-    <div id="video-player-container">
-      <iframe id="video-player" title="video" width="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div>
-      <!--button onclick="open about page here" id="category-element">about</button-->
-      <button onclick="StopVideo(); FocusPage(2)" id="category-element">back</button>
+    <div id="video-container">
+      <button onclick="StopVideo(); FocusPage(2)" id="category-element" class="align-left">back</button>
+      <div id="video">
+        <div id="video-content">
+          <h1 id="video-player-title">video title</h1>
+          <p id="video-player-tagline">tagline</p>
+          <div id="video-player-container">
+            <iframe id="video-player" title="video" width="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="video-information">
+        <h1>about</h1>
+        <p>Automation & the Industry is a short documentary detailing the rise of artificial intelligence and automation in the workforce.</p>
+        <br>
+        <br>
+        <p>This is my own cut of the video. A final cut edited by a team member would be submitted to various contests and recieve a few distinctions.</p>
+        <br>
+        <br>
+        <h1>credits</h1>
+        <p></p>
+      </div>
     </div>
   </div>
 </body>
