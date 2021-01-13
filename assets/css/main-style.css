@@ -28,6 +28,10 @@ h2 {
    font-weight: bold;
 }
 
+p {
+   font-size: 2.5vh;
+}
+
 #icon_ku {
    position: absolute;
    transform: translate(-50%, -115%);
@@ -54,10 +58,7 @@ h2 {
 
    outline: 0;
    font-family: renner;
-   font-size: 2.15vh;
-
-   opacity: 1;
-   animation: fade 1s linear;
+   font-size: 2.5vh;
 
    cursor: pointer;
 }
@@ -72,12 +73,12 @@ h2 {
 }
 
 #about-me {
-   font-size: 2.15vh;
    padding: 16px;
    position: relative;
    min-width: 200px;
    max-width: 600px;
    text-align: center;
+   font-size: 2.5vh;
 }
 
 #links-container {
@@ -134,6 +135,11 @@ button:hover {
 }
 
 .main {
+   position: fixed;
+   animation: fade 750ms;
+}
+
+.introducing {
    position: fixed;
    animation: move-in 1s;
    animation-fill-mode: both;
@@ -280,60 +286,6 @@ button:hover {
 .label-tagline {
    font-style: italic;
    font-size: 2vmin !important;
-}
-
-#video-player-container {
-   margin-top: 4vmin;
-   margin-bottom: 4vmin;
-   position: relative;
-   width: 100%;
-   height: 45vmin;
-}
-
-#video-player {
-   height: 100%;
-   position: absolute;
-   border: none;
-   border-radius: 12px;
-}
-
-#video-player-tagline {
-   font-style: italic;  
-}
-
-.align-left {
-   position: fixed;
-   z-index: 1;
-   transform: translate(-100%, 0);
-}
-
-#video-container {
-   /*
-   margin-top: 6vmin;
-   margin-bottom: 6vmin;*/
-   width: 75vmin;
-   overflow-y: auto;
-}
-
-#video-content {
-   display: flex;
-   justify-content: center;
-   align-items : center;
-   flex-direction: column;
-   width: 100%;
-}
-
-#video {
-   height: 100%;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-#video-information {
-   font-size: 2vmin;
-   padding-bottom: 20%;
 }
 
 ::-webkit-scrollbar {
