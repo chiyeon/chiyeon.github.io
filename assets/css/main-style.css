@@ -18,7 +18,7 @@ body {
 }
 
 #title-text {
-   font-size: 10vmin;
+   font-size: 10vh;
    margin: 0;
    font-weight: bold;
 }
