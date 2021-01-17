@@ -10,3 +10,12 @@ body {
 #links-container a img {
    filter: invert(0);
 }
+
+a {
+   color: #1b1b1b;
+   transition: color 150ms;
+}
+
+a:hover {
+   color: #747474;
+}
