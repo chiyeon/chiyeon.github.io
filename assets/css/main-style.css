@@ -148,9 +148,7 @@ button:hover {
 
 .main {
    position: fixed;
-   opacity: 0;
    animation: fade 750ms;
-   animation-fill-mode: both;
 }
 
 .introducing {

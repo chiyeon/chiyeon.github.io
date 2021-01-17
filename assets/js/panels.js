@@ -43,12 +43,24 @@ window.addEventListener("load", () => {
    for(var i = 0; i < elements.length; i++) {
       if(newPage == i) {
          elements[i].setAttribute("class", "page main");
-         console.log("HIm");
       } else {
          elements[i].setAttribute("class", "page hidden");
       }
    }
 }, false);
+
+
+// refocuses page when pressing the back button in the main page, using the cached 'page' variable in the URL
+window.onpopstate = function() {
+   console.log("HI");
+   var urlParams = new URLSearchParams(window.location.search);
+   var newPage = urlParams.get("page");
+
+   if(newPage == undefined)
+      return;
+   
+   FocusPage(newPage);
+}
 
 // dynamic video switching has been removed in favor of individual web pages per video.
 
