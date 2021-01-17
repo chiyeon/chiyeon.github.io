@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
 
+@font-face {
+   font-family: "Gilroy";
+   src: url("/assets/fonts/gilroy/Fonts/gilroy-light.otf");
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: "Gilroy";
+   src: url("/assets/fonts/gilroy/Fonts/gilroy-extrabold.otf");
+   font-weight: bold;
+}
+
 * {
-   font-family: 'Montserrat', sans-serif;
+   font-family: "Gilroy", 'Montserrat', sans-serif;
    margin: 0;
    padding: 0;
    overflow: hidden;
@@ -14,14 +26,14 @@ body {
    -o-transition: background-color 500ms ease, color 500ms ease;
 }
 
-#title-text {
-   font-size: 10vh;
+#title-text {  
+   font-size: 9vh;
    margin: 0;
    font-weight: bold;
 }
 
 h1 {
-	font-size: 6vh;
+	font-size: 5vh;
 }
 
 h2 {
@@ -281,6 +293,10 @@ button:hover {
    font-size: 2.5vmin;
    color: white;
    word-wrap: break-word;
+}
+
+.label > :first-child {
+   font-weight: bold;
 }
 
 .label-tagline {
