@@ -4,7 +4,7 @@
 }
 
 * {
-   font-family: 'Josefin Sans', renner, sans-serif;
+   font-family: 'Josefin Sans', sans-serif;
    margin: 0;
    padding: 0;
    overflow: hidden;
@@ -23,19 +23,23 @@ body {
    font-weight: bold;
 }
 
+h1 {
+	font-size: 6vh;
+}
+
 h2 {
    font-size: 5vmin;
    font-weight: bold;
 }
 
 p {
-   font-size: 2.5vh;
+   font-size: 2.25vh;
 }
 
 #icon_ku {  
    position: absolute;
    transform: translate(-50%, -115%);
-   width: 14vh;
+   width: 15vh;
    height: auto;
    z-index: -1;
 }
