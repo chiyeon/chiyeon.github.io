@@ -8,7 +8,8 @@ function FocusPage(pageID) {
       }
    }*/
 
-   localStorage.setItem("page", pageID);
+   // localStorage.setItem("page", pageID);
+   history.pushState({}, null, "/?page=" + pageID);
 
    for(var i = 0; i < elements.length; i++) {
       if(i == pageID) {
@@ -31,7 +32,10 @@ function FocusPage(pageID) {
 }
 
 window.addEventListener("load", () => {
-   var newPage = localStorage.getItem("page");
+   // var newPage = localStorage.getItem("page");
+
+   var urlParams = new URLSearchParams(window.location.search);
+   var newPage = urlParams.get("page");
 
    if(newPage == undefined)
       return;
@@ -45,6 +49,16 @@ window.addEventListener("load", () => {
       }
    }
 }, false);
+
+window.onpageshow = function() {
+   var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+}
 
 // dynamic video switching has been removed in favor of individual web pages per video.
 

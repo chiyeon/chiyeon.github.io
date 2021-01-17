@@ -44,6 +44,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 }
 
 #video-information {
@@ -62,4 +63,8 @@
 body {
    overflow-y: auto;
    height: 100vh;
+}
+
+#info-hint {
+   transform: translate(0, 500%);
 }

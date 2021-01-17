@@ -8,6 +8,7 @@
     <link href="/assets/css/videos-style.css" rel="stylesheet" type="text/css"/>
     <link id="color-mode-style" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="/assets/js/darkmode-toggle.js"></script>
+    <script type="text/javascript" src="/assets/js/scrollfade.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
 
   <div id="page">
     <div id="video-container">
-        <button onclick="window.location.href='/'" id="category-element" class="align-left">back</button>
+        <button onclick="window.location.href='/?page=2'" id="category-element" class="align-left">back</button>
         <div id="video">
           <div id="video-content">
             <h1 id="video-player-title">Automation & the Industry</h1>
@@ -30,6 +31,9 @@
             <div id="video-player-container">
               <iframe id="video-player" title="video" src="https://www.youtube.com/embed/hzECkv0sDbQ?enablejsapi=1&version=3&playerapiid=ytplayer" width="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+          </div>
+          <div id="info-hint">
+            <p>info</p>
           </div>
         </div>
         <div id="video-information">
