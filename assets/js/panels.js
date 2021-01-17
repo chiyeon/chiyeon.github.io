@@ -49,15 +49,19 @@ window.addEventListener("load", () => {
    }
 }, false);
 
+// add '?page=0' to the  end of the URL if nothing is there.
 
-// refocuses page when pressing the back button in the main page, using the cached 'page' variable in the URL
+
+// refocuses page when pressing the back button in the main page, using the cached 'page' variable in the URL  
 window.onpopstate = function() {
-   console.log("HI");
    var urlParams = new URLSearchParams(window.location.search);
    var newPage = urlParams.get("page");
 
-   if(newPage == undefined)
+   // focus the page on 0 if is undefined. this is because when the user first loads the page, ?page=0 is not included in the homepage
+   if(newPage == undefined) {
+      FocusPage(0);
       return;
+   }
    
    FocusPage(newPage);
 }
