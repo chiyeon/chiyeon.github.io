@@ -50,16 +50,6 @@ window.addEventListener("load", () => {
    }
 }, false);
 
-window.onpageshow = function() {
-   var historyTraversal = event.persisted || 
-                         ( typeof window.performance != "undefined" && 
-                              window.performance.navigation.type === 2 );
-  if ( historyTraversal ) {
-    // Handle page restore.
-    window.location.reload();
-  }
-}
-
 // dynamic video switching has been removed in favor of individual web pages per video.
 
 // === DEPRACATED ================
