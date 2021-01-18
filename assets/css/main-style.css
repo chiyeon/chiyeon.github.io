@@ -272,10 +272,6 @@ button:hover {
    min-width: 106%;
 }
 
-.grid:hover #award-icon {
-   opacity: 1;
-}
-
 .grid .label {
    position: fixed;
    text-align: center;
@@ -314,7 +310,6 @@ button:hover {
 #award-icon {
    fill: gold;
    position: fixed;
-   opacity: 0.5;
    top: 2%;
    left: 2%;
    width: 5vh;
