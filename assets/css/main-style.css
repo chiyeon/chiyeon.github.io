@@ -250,7 +250,7 @@ button:hover {
    -moz-transform: translate3d(0, 0, 0)
 }
 
-.grid img {
+.grid img:not(#award-icon) {
    flex-shrink: 0;
    filter: saturate(0.5);
    -webkit-filter: saturate(0.5);
@@ -265,11 +265,15 @@ button:hover {
    -o-transition: 350ms all;
 }
 
-.grid:hover img {
+.grid:hover img:not(#award-icon) {
    filter: saturate(1);
    -webkit-filter: saturate(1);
    min-height: 106%;
    min-width: 106%;
+}
+
+.grid:hover #award-icon {
+   opacity: 1;
 }
 
 .grid .label {
@@ -306,3 +310,15 @@ button:hover {
 ::-webkit-scrollbar {
    width: 0px;
 }  
+
+#award-icon {
+   fill: gold;
+   position: fixed;
+   opacity: 0.5;
+   top: 2%;
+   left: 2%;
+   width: 5vh;
+   height: 5vh;
+   
+   transition: opacity 350ms;
+}
