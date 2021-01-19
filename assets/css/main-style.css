@@ -103,11 +103,11 @@ p {
    min-width: 20px;
 }
 
-a img {
+.link-icon img {
    transition: 200ms opacity;
 }
 
-a img:hover {
+.link-icon img:hover {
    opacity: 0.5;
 }
 
