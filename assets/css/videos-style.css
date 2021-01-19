@@ -7,11 +7,14 @@
    border-radius: 12px;
 }
 
+#video-player-container img {
+   width: 100%;
+}
+
 #video-player {
    height: 100%;
    position: absolute;
    border: none;
-   
 }
 
 #video-player-tagline {
