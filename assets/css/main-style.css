@@ -101,10 +101,13 @@ p {
 #links-container a img {
    max-width: 40px;
    min-width: 20px;
+}
+
+a img {
    transition: 200ms opacity;
 }
 
-#links-container a img:hover {
+a img:hover {
    opacity: 0.5;
 }
 

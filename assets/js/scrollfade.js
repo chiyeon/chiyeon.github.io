@@ -1,3 +1,3 @@
-window.onscroll = function() {
-   console.log("hmm");
+document.body.onscroll = function() {
+   console.log("HI");
 }
