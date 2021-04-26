@@ -225,8 +225,8 @@ button:hover {
 #grid-container {
    padding: 16px;
    display: grid;
-   min-width: 15vw;
-   max-width: 1000px;
+   min-width: 15vh;
+   max-width: 760px;
    grid-gap: 15px;
    max-height: 60vh;
    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
