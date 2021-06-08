@@ -2,4 +2,4 @@
 
 Welcome to my website :)
 
-Feel free to check it out [here](https://chiyeon.github.io/)
+Feel free to check it out [here](https://www.benjibenji.com)
