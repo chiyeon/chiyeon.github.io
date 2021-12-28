@@ -14,18 +14,18 @@ function toggleDarkmode() {
 function UpdateDarkmode() {
    if(isDarkMode) {
       darkmodeToggle.textContent = "Light";
-      colorModeStyle.setAttribute("href", "/assets/css/dark-mode.css");
+      colorModeStyle.setAttribute("href", "../css/dark-mode.css");
    } else {
       darkmodeToggle.textContent = "Dark";
-      colorModeStyle.setAttribute("href", "/assets/css/light-mode.css");
+      colorModeStyle.setAttribute("href", "../css/light-mode.css");
    }
 }
 
 // immediately load the CSS before page initializes, that way avoids transition
 if(isDarkMode) {
-   colorModeStyle.setAttribute("href", "/assets/css/dark-mode.css");
+   colorModeStyle.setAttribute("href", "../css/dark-mode.css");
 } else {
-   colorModeStyle.setAttribute("href", "/assets/css/light-mode.css");
+   colorModeStyle.setAttribute("href", "../css/light-mode.css");
 }
 
 window.onload = function() {

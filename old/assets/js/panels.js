@@ -9,7 +9,7 @@ function FocusPage(pageID) {
    }*/
 
    // localStorage.setItem("page", pageID);
-   history.pushState({}, null, "/?page=" + pageID);
+   history.pushState({}, null, "/old/?page=" + pageID);
 
    for(var i = 0; i < elements.length; i++) {
       if(i == pageID) {
