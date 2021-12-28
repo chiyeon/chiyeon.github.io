@@ -1,0 +1,53 @@
+body {
+   overflow-y: visible;
+}
+
+h1 {
+   font-size: 350%;
+   padding-top: 4%;
+
+   text-align: center;
+}
+
+h2 {
+   font-size: 215%;
+   font-weight: bold;
+
+   text-align: center;
+}
+
+h3 {
+   font-size: 175%;
+   line-height: 1%;
+   font-weight: 100;
+
+   text-align: center;
+}
+
+p {
+   font-size: 125%;
+   padding-left: 25%;
+   padding-right: 25%;
+   text-align: justify;
+}
+
+#acceleration-equation {
+   width:25%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#code {
+   width: 50%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+iframe {
+   display: block; 
+   margin: none;
+   width: 960px;
+   height: 600px;
+}

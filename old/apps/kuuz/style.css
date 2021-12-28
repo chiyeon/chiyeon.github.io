@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: #292929;
+    color: rgb(192, 192, 192);
+}
+
+#question-box {
+    position: absolute;
+    width: 50vh;
+    height: 25vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    box-shadow: 6px 6px rgb(122, 122, 122);
+}
+
+#progress-bar {
+    background-color: rgb(227, 227, 227);
+    widtH: 0%;
+    height: .77vh;
+    transition: 300ms;
+}
+
+#question {
+    font-size: 2.35vh;
+    font-weight: bold;
+    position: absolute;
+    width: 80%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#answers-box {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 25vh 25vh;
+    grid-template-rows: 7.5vh 7.5vh;
+    grid-row: auto auto;
+}
+
+#results-box {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#house-description {
+    font-size: 1.9vh;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+#restart-button {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 30%;
+    font-size: 1.6vh;
+    border: none;
+    outline: none;
+    background-color: #7c7c7c00;
+    color: rgb(192, 192, 192);
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #7c7c7c44;
+    transition: 200ms;
+}
+
+.answer-button {
+    background-color: #7c7c7c00;
+    color: rgb(192, 192, 192);
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.7vh;
+    padding-right: 1.75vh;
+    padding-left: 1.75vh;
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #7c7c7c44;
+    transition: 200ms;
+}
+
+.highlightable-text {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
