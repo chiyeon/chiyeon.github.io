@@ -2,13 +2,13 @@
 
 @font-face {
    font-family: "Gilroy";
-   src: url("/assets/fonts/gilroy/Fonts/gilroy-light.otf");
+   src: url("/old/assets/fonts/gilroy/Fonts/gilroy-light.otf");
    font-weight: normal;
 }
 
 @font-face {
    font-family: "Gilroy";
-   src: url("/assets/fonts/gilroy/Fonts/gilroy-extrabold.otf");
+   src: url("/old/assets/fonts/gilroy/Fonts/gilroy-extrabold.otf");
    font-weight: bold;
 }
 
