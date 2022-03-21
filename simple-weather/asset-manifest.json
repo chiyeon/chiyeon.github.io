@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ea31163.css",
-    "main.js": "/static/js/main.59023789.js",
-    "static/media/trees_green.png": "/static/media/trees_green.87e6c088288f1f746b2a.png",
-    "static/media/trees_snowy.png": "/static/media/trees_snowy.25ba19a96fde970c9306.png",
-    "static/media/moon.png": "/static/media/moon.8a38a270b4c4dd322aa4.png",
-    "static/media/background_night.png": "/static/media/background_night.5e3255b386c6c627df5b.png",
-    "static/media/sun.png": "/static/media/sun.5acdda3a60a2ec6cbf49.png",
-    "static/media/cloud.png": "/static/media/cloud.0a4385f01dff6b9590cf.png",
-    "static/media/background_day.png": "/static/media/background_day.06571813995b4f2b1fd2.png",
-    "static/media/rain.png": "/static/media/rain.2c797424d159613c982d.png",
-    "static/media/ground_green.png": "/static/media/ground_green.310fb52799a335a91287.png",
-    "static/media/ground_snowy.png": "/static/media/ground_snowy.ae6e552d8c8433d16fd5.png",
-    "index.html": "/index.html",
-    "main.4ea31163.css.map": "/static/css/main.4ea31163.css.map",
-    "main.59023789.js.map": "/static/js/main.59023789.js.map"
+    "main.css": "/simple-weather/static/css/main.c42caaa7.css",
+    "main.js": "/simple-weather/static/js/main.59023789.js",
+    "static/media/trees_green.png": "/simple-weather/static/media/trees_green.87e6c088288f1f746b2a.png",
+    "static/media/trees_snowy.png": "/simple-weather/static/media/trees_snowy.25ba19a96fde970c9306.png",
+    "static/media/moon.png": "/simple-weather/static/media/moon.8a38a270b4c4dd322aa4.png",
+    "static/media/background_night.png": "/simple-weather/static/media/background_night.5e3255b386c6c627df5b.png",
+    "static/media/sun.png": "/simple-weather/static/media/sun.5acdda3a60a2ec6cbf49.png",
+    "static/media/cloud.png": "/simple-weather/static/media/cloud.0a4385f01dff6b9590cf.png",
+    "static/media/background_day.png": "/simple-weather/static/media/background_day.06571813995b4f2b1fd2.png",
+    "static/media/rain.png": "/simple-weather/static/media/rain.2c797424d159613c982d.png",
+    "static/media/ground_green.png": "/simple-weather/static/media/ground_green.310fb52799a335a91287.png",
+    "static/media/ground_snowy.png": "/simple-weather/static/media/ground_snowy.ae6e552d8c8433d16fd5.png",
+    "index.html": "/simple-weather/index.html",
+    "main.c42caaa7.css.map": "/simple-weather/static/css/main.c42caaa7.css.map",
+    "main.59023789.js.map": "/simple-weather/static/js/main.59023789.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ea31163.css",
+    "static/css/main.c42caaa7.css",
     "static/js/main.59023789.js"
   ]
 }
