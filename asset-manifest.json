@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd75ee82.chunk.css",
+    "main.js": "/static/js/main.28e2d6dd.chunk.js",
+    "main.js.map": "/static/js/main.28e2d6dd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8c754af3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8c754af3.js.map",
+    "static/js/2.6bea8935.chunk.js": "/static/js/2.6bea8935.chunk.js",
+    "static/js/2.6bea8935.chunk.js.map": "/static/js/2.6bea8935.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.bd75ee82.chunk.css.map": "/static/css/main.bd75ee82.chunk.css.map",
+    "static/js/2.6bea8935.chunk.js.LICENSE.txt": "/static/js/2.6bea8935.chunk.js.LICENSE.txt",
+    "static/media/anima.jpg": "/static/media/anima.ce8536ab.jpg",
+    "static/media/automation_&_the_industry.jpg": "/static/media/automation_&_the_industry.e53035e5.jpg",
+    "static/media/f1.jpg": "/static/media/f1.a5a9ad3f.jpg",
+    "static/media/hook_line_key.jpg": "/static/media/hook_line_key.ada827cc.jpg",
+    "static/media/indigo.jpg": "/static/media/indigo.5628eb53.jpg",
+    "static/media/it_fishes_at_night.jpg": "/static/media/it_fishes_at_night.1800de9f.jpg",
+    "static/media/klowi.jpg": "/static/media/klowi.8b2931e5.jpg",
+    "static/media/mori.jpg": "/static/media/mori.defb03f0.jpg",
+    "static/media/onigiri.jpg": "/static/media/onigiri.81e53f64.jpg",
+    "static/media/prime_e.jpg": "/static/media/prime_e.bad8827f.jpg",
+    "static/media/pur.jpg": "/static/media/pur.b1392650.jpg",
+    "static/media/qki.jpg": "/static/media/qki.6a622285.jpg",
+    "static/media/raft.jpg": "/static/media/raft.1a544f5c.jpg",
+    "static/media/sanctuary_2.jpg": "/static/media/sanctuary_2.6d677d24.jpg",
+    "static/media/shoota.jpg": "/static/media/shoota.31b81001.jpg",
+    "static/media/simple_weather.jpg": "/static/media/simple_weather.ac99d75a.jpg",
+    "static/media/snowfall.jpg": "/static/media/snowfall.aad8314e.jpg",
+    "static/media/val_cardboard.jpg": "/static/media/val_cardboard.66e68be3.jpg",
+    "static/media/winding_string.jpg": "/static/media/winding_string.4f587ecd.jpg",
+    "static/media/you_are_you.jpg": "/static/media/you_are_you.0bf0ea3e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c754af3.js",
+    "static/js/2.6bea8935.chunk.js",
+    "static/css/main.bd75ee82.chunk.css",
+    "static/js/main.28e2d6dd.chunk.js"
+  ]
+}
