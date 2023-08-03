@@ -1,1 +1,62 @@
+<<<<<<< HEAD
 <!doctypehtml><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Woodstock</title><link href=style.css rel=stylesheet></head><body><div id=board></div><button id=butt>Perform Best Move</button><script src=index.js></script><script src=board.js></script><script>const set_board=e=>{board.set_board(e),board.update_chessboard()};var make_ai_move;let board=new Chessboard("board");document.addEventListener("DOMContentLoaded",(async()=>{const e=await WoodstockModule();butt.addEventListener("click",(()=>{e.ccall("make_best_move",null,null,null)})),make_ai_move=()=>{setTimeout((()=>{e.ccall("make_best_move",null,null,null)}),10)};for(let a=0;a<64;a++){document.getElementById(`sq-${a}`).addEventListener("click",(()=>{e.ccall("click_square",null,["number"],[a])}))}}))</script><script src=index.js async></script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodstock the Chess Bot</title>
+
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="css/chess-style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="lib/chessboard-1.0.0.min.js"></script>
+    <script src="js/woodstock.js"></script>
+    <script src="js/logic.js" type="module"></script>
+    <!--script src="engine/performance_tests.js" type="module"></script-->
+
+</head>
+
+<body>
+    <main>
+        <div class="winner">
+            <h2 id="winner-title" class="hidden">winner name</h2>
+        </div>
+        <div class="profile left">
+            <img src="img/woodstock.jpg" />
+            <div class="info">
+                <h2>Woodstock</h2>
+                <p>90000 Rating</p>
+            </div>
+        </div>
+        <div id="board"></div>
+        <div class="profile right">
+            <img src="img/snoopy.jpg" />
+            <div class="info">
+                <h2>You</h2>
+                <p>??? Rating</p>
+            </div>
+        </div>
+
+        <!--div class="controls">
+            <button id="reset-button">Reset</button>
+            <button id="swap-button">Swap Colors</button>
+            <button id="random-button">Random Colors</button>
+            <button id="undo-button">Undo</button>
+        </div>
+        <div class="stats">
+            <p id="evaluation"></p>
+            <p id="positions"></p>
+            <p id="time"></p>
+        </div>
+
+
+        <button id="run-benchmark">Run Benchmark</button>
+        <button id="run-benchmark2">Run Benchmark 2</button-->
+    </main>
+</body>
+
+</html>
+>>>>>>> parent of cef37f7 (sutffs)
