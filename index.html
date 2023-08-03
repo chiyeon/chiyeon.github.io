@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<!doctypehtml><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Woodstock</title><link href=style.css rel=stylesheet></head><body><div id=board></div><button id=butt>Perform Best Move</button><script src=index.js></script><script src=board.js></script><script>const set_board=e=>{board.set_board(e),board.update_chessboard()};var make_ai_move;let board=new Chessboard("board");document.addEventListener("DOMContentLoaded",(async()=>{const e=await WoodstockModule();butt.addEventListener("click",(()=>{e.ccall("make_best_move",null,null,null)})),make_ai_move=()=>{setTimeout((()=>{e.ccall("make_best_move",null,null,null)}),10)};for(let a=0;a<64;a++){document.getElementById(`sq-${a}`).addEventListener("click",(()=>{e.ccall("click_square",null,["number"],[a])}))}}))</script><script src=index.js async></script></body></html>
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,11 +37,11 @@
             </div>
         </div>
 
-        <!--div class="controls">
-            <button id="reset-button">Reset</button>
-            <button id="swap-button">Swap Colors</button>
-            <button id="random-button">Random Colors</button>
-            <button id="undo-button">Undo</button>
+        <div class="controls">
+            <button id="reset-button" class="button">Reset</button>
+            <button id="swap-button" class="button">Swap</button>
+            <!-- <button id="random-button">Random Colors</button> -->
+            <button id="undo-button" class="button">Undo</button>
         </div>
         <div class="stats">
             <p id="evaluation"></p>
@@ -54,9 +51,8 @@
 
 
         <button id="run-benchmark">Run Benchmark</button>
-        <button id="run-benchmark2">Run Benchmark 2</button-->
+        <button id="run-benchmark2">Run Benchmark 2</button -->
     </main>
 </body>
 
 </html>
->>>>>>> parent of cef37f7 (sutffs)
